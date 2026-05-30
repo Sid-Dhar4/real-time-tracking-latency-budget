@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+.env/
+*.egg-info/
+
+# Data
+data/
+datasets/
+external/
+
+# Large generated outputs
+results/detections/*
+results/tracks/*
+results/trackeval/*
+results/plots/*
+results/videos/*
+results/failure_cases/*
+results/tables/*
+!results/README.md
+!results/metrics.csv
+!results/latency.csv
+!results/sweep_results.csv
+
+# Logs
+results/logs/*
+!results/logs/.gitkeep
+
+# System
+.DS_Store
+Thumbs.db
