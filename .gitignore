@@ -11,8 +11,12 @@ __pycache__/
 *.egg-info/
 
 # Data
-data/
-datasets/
+data/*
+!data/kitti_tracking/
+data/kitti_tracking/*
+!data/kitti_tracking/README.md
+
+# External downloads
 external/
 
 # Large generated outputs
@@ -27,6 +31,8 @@ results/tables/*
 !results/metrics.csv
 !results/latency.csv
 !results/sweep_results.csv
+!results/tables/
+!results/tables/dataset_summary.csv
 
 # Logs
 results/logs/*
