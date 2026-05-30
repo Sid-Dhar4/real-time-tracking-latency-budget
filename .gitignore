@@ -31,6 +31,7 @@ results/tables/*
 # Logs
 results/logs/*
 !results/logs/.gitkeep
+!results/logs/environment_audit.txt
 
 # System
 .DS_Store

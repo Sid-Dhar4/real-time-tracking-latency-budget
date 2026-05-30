@@ -1,0 +1,112 @@
+========== ENVIRONMENT AUDIT ==========
+Sat May 30 08:36:39 AM EDT 2026
+
+========== OS ==========
+Distributor ID:	Ubuntu
+Description:	Ubuntu 24.04.4 LTS
+Release:	24.04
+Codename:	noble
+
+========== KERNEL ==========
+Linux sudha 6.17.0-29-generic #29~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon May 11 10:30:58 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+
+========== CPU ==========
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           48 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  16
+On-line CPU(s) list:                     0-15
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD Ryzen 7 8745HX with Radeon Graphics
+CPU family:                              25
+Model:                                   97
+Thread(s) per core:                      2
+Core(s) per socket:                      8
+Socket(s):                               1
+Stepping:                                2
+Frequency boost:                         enabled
+CPU(s) scaling MHz:                      61%
+CPU max MHz:                             5153.1558
+CPU min MHz:                             403.5610
+BogoMIPS:                                7186.68
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpuid_fault cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze
+Virtualization:                          AMD-V
+L1d cache:                               256 KiB (8 instances)
+L1i cache:                               256 KiB (8 instances)
+L2 cache:                                8 MiB (8 instances)
+L3 cache:                                32 MiB (1 instance)
+
+========== GPU: NVIDIA-SMI ==========
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+
+========== GPU: PCI DEVICES ==========
+00:00.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14d8
+00:00.2 IOMMU: Advanced Micro Devices, Inc. [AMD] Device 14d9
+00:01.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14da
+00:01.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 14db
+00:01.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 14db
+00:02.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14da
+00:02.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 14db
+00:03.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14da
+00:03.3 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 14db
+00:04.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14da
+00:08.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14da
+00:08.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 14dd
+00:08.3 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 14dd
+00:14.0 SMBus: Advanced Micro Devices, Inc. [AMD] FCH SMBus Controller (rev 71)
+00:14.3 ISA bridge: Advanced Micro Devices, Inc. [AMD] FCH LPC Bridge (rev 51)
+00:18.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14e0
+00:18.1 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14e1
+00:18.2 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14e2
+00:18.3 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14e3
+00:18.4 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14e4
+00:18.5 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14e5
+00:18.6 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14e6
+00:18.7 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14e7
+01:00.0 VGA compatible controller: NVIDIA Corporation Device 2d59 (rev a1)
+01:00.1 Audio device: NVIDIA Corporation Device 22eb (rev a1)
+05:00.0 VGA compatible controller: Advanced Micro Devices, Inc. [AMD/ATI] Raphael (rev da)
+05:00.2 Encryption controller: Advanced Micro Devices, Inc. [AMD] Family 19h PSP/CCP
+05:00.3 USB controller: Advanced Micro Devices, Inc. [AMD] Device 15b6
+05:00.4 USB controller: Advanced Micro Devices, Inc. [AMD] Device 15b7
+05:00.5 Multimedia controller: Advanced Micro Devices, Inc. [AMD] ACP/ACP3X/ACP6x Audio Coprocessor (rev 62)
+05:00.6 Audio device: Advanced Micro Devices, Inc. [AMD] Family 17h/19h HD Audio Controller
+06:00.0 USB controller: Advanced Micro Devices, Inc. [AMD] Device 15b8
+
+========== GPU: NVIDIA KERNEL MODULES ==========
+nvidia_wmi_ec_backlight    12288  0
+video                  77824  3 nvidia_wmi_ec_backlight,amdgpu,ideapad_laptop
+wmi                    28672  10 lenovo_wmi_events,video,nvidia_wmi_ec_backlight,lenovo_wmi_hotkey_utilities,lenovo_wmi_other,wmi_bmof,lenovo_wmi_capdata01,lenovo_wmi_gamezone,ideapad_laptop,lenovo_wmi_helpers
+
+========== UBUNTU DRIVER RECOMMENDATIONS ==========
+== /sys/devices/pci0000:00/0000:00:01.1/0000:01:00.0 ==
+modalias : pci:v000010DEd00002D59sv000017AAsd00003E25bc03sc00i00
+vendor   : NVIDIA Corporation
+driver   : nvidia-driver-595-open - distro non-free recommended
+driver   : nvidia-driver-595-server - distro non-free
+driver   : nvidia-driver-595 - distro non-free
+driver   : nvidia-driver-580-open - distro non-free
+driver   : nvidia-driver-580-server-open - distro non-free
+driver   : nvidia-driver-580 - distro non-free
+driver   : nvidia-driver-580-server - distro non-free
+driver   : nvidia-driver-595-server-open - distro non-free
+driver   : xserver-xorg-video-nouveau - distro free builtin
+
+
+========== PYTHON ==========
+
+========== PYTHON3 ==========
+/usr/bin/python3
+Python 3.12.3
+
+========== CONDA ==========
+/home/sudha/miniconda3/condabin/conda
+conda 24.4.0
+
+========== GIT ==========
+git version 2.43.0
+
+========== CURRENT COMMIT ==========
+f346649 Initialize tracking latency benchmark repo skeleton
