@@ -4,13 +4,13 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M1 | not started | prepare KITTI dataset structure and split config |
+| M1 | in progress | write KITTI split config and dataset verifier |
 
 ## Milestone tracker
 
 | Milestone | Goal | Status | Evidence artifact | Commit |
 | --------- | ---- | ------ | ----------------- | ------ |
-| M0 | Repo skeleton + environment audit | complete | results/logs/environment_audit.txt | 23fc321 |
+| M0 | Repo skeleton + environment audit | complete | results/logs/environment_audit.txt | 76316d2 |
 | M1 | Dataset prep + split config | not started | results/tables/dataset_summary.csv | |
 | M2 | Detector inference on one sequence | not started | detections CSV + sample image | |
 | M3 | Tracker integration on one sequence | not started | tracked video/GIF | |
@@ -32,7 +32,8 @@
 | M0G | Commit M0 closeout | complete |
 | M0H | Final M0 verification | complete |
 | M0I | Track environment audit and finalize M0 tracker | complete |
-| M0J | Commit final M0 cleanup | not started |
+| M0J | Commit final M0 cleanup | complete |
+| M1A | Fix M0 tracker typo and mark M1 active | complete |
 
 ## M0 evidence
 

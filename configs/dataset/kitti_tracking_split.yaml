@@ -1,0 +1,38 @@
+dataset:
+  name: kitti_tracking
+  root: data/kitti_tracking
+  source: KITTI tracking training split
+  leaderboard_submission: false
+
+task:
+  type: multi_object_tracking_2d
+  camera: image_02
+  first_classes:
+    - Car
+  later_classes:
+    - Pedestrian
+    - Cyclist
+
+mvp_split:
+  smoke_test_sequences:
+    - "0000"
+  validation_sequences:
+    - "0000"
+    - "0001"
+  later_sequences:
+    - "0002"
+    - "0003"
+    - "0004"
+
+paths:
+  training_images: data/kitti_tracking/training/image_02
+  training_labels: data/kitti_tracking/training/label_02
+  training_calib: data/kitti_tracking/training/calib
+  testing_images: data/kitti_tracking/testing/image_02
+
+notes:
+  - Use KITTI tracking training data only.
+  - Do not submit to the public KITTI leaderboard.
+  - Start with sequence 0000 as a smoke test.
+  - Add more sequences only after detector, tracker, and evaluation work on sequence 0000.
+  - First MVP should focus on reproducibility and measurement, not model training.
