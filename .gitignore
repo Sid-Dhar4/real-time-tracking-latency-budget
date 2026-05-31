@@ -10,6 +10,12 @@ __pycache__/
 .env/
 *.egg-info/
 
+# Model weights
+*.pt
+*.pth
+*.onnx
+*.engine
+
 # Data
 data/*
 !data/kitti_tracking/
@@ -38,6 +44,7 @@ results/tables/*
 results/logs/*
 !results/logs/.gitkeep
 !results/logs/environment_audit.txt
+!results/logs/m2_detector_smoke_test.txt
 
 # System
 .DS_Store
