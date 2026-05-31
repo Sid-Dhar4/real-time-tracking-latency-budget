@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M4 | not started | prepare evaluation/export path for KITTI tracking metrics |
+| M5 | not started | run confidence threshold sweep and latency summary |
 
 ## Milestone tracker
 
@@ -14,7 +14,7 @@
 | M1 | Dataset prep + split config | complete | results/tables/dataset_summary.csv | 52324da |
 | M2 | Detector inference on one sequence | complete | results/logs/m2_detector_smoke_test.txt | 93319cf |
 | M3 | Tracker integration on one sequence | complete | results/logs/m3_tracker_smoke_test.txt + results/tables/m3_tracker_summary.csv | pending |
-| M4 | TrackEval/evaluation working | not started | metrics CSV | |
+| M4 | Local KITTI-style evaluation working | complete | results/metrics.csv + results/logs/m4_local_eval.txt | pending |
 | M5 | Threshold sweep + latency benchmark | not started | Pareto plot | |
 | M6 | Failure analysis | not started | failure cases page | |
 | M7 | README/demo/resume/interview polish | not started | final artifacts | |
@@ -35,7 +35,11 @@
 | M3G | Run ByteTrack tracker on full KITTI sequence 0000 | complete |
 | M3H | Create simple tracker summary table | complete |
 | M3I | Update project tracker and allow M3 summary evidence | complete |
-| M3J | Commit full-sequence tracker evidence | not started |
+| M3J | Commit full-sequence tracker evidence | complete |
+| M4A | Mark M4 active and allow evaluation evidence | complete |
+| M4B | Write local KITTI-style evaluator | complete |
+| M4C | Run local evaluation on Car class | complete |
+| M4D | Commit local evaluation evidence | complete |
 
 ## MVP lock
 

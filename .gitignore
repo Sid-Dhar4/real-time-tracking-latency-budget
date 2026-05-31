@@ -40,6 +40,7 @@ results/tables/*
 !results/tables/
 !results/tables/dataset_summary.csv
 !results/tables/m3_tracker_summary.csv
+!results/tables/m4_eval_summary.csv
 
 # Logs
 results/logs/*
@@ -47,6 +48,7 @@ results/logs/*
 !results/logs/environment_audit.txt
 !results/logs/m2_detector_smoke_test.txt
 !results/logs/m3_tracker_smoke_test.txt
+!results/logs/m4_local_eval.txt
 
 # System
 .DS_Store
