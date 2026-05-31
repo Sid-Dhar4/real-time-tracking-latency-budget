@@ -3,10 +3,10 @@ config: configs/detector/yolov8n.yaml
 weights: yolov8n.pt
 device: cpu
 image_dir: data/kitti_tracking/training/image_02/0000
-frames_processed: 10
-detections_written: 87
+frames_processed: 154
+detections_written: 1439
 detections_csv: results/detections/yolov8n_seq0000_detections.csv
 sample_visualization: results/plots/yolov8n_seq0000_sample.jpg
-mean_latency_ms: 19.43
-p95_latency_ms: 48.77
-fps_estimate: 51.48
+mean_latency_ms: 11.40
+p95_latency_ms: 14.00
+fps_estimate: 87.72

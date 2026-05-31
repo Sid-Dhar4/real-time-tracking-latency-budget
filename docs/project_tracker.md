@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M1 | complete | KITTI sequence 0000/0001 verified; start detector environment next |
+| M2 | complete | YOLOv8n detector ran on full KITTI sequence 0000; start tracker integration next |
 
 ## Milestone tracker
 
@@ -12,7 +12,7 @@
 | --------- | ---- | ------ | ----------------- | ------ |
 | M0 | Repo skeleton + environment audit | complete | results/logs/environment_audit.txt | 76316d2 |
 | M1 | Dataset prep + split config | complete | results/tables/dataset_summary.csv | pending |
-| M2 | Detector inference on one sequence | not started | detections CSV + sample image | |
+| M2 | Detector inference on one sequence | complete | results/detections/yolov8n_seq0000_detections.csv + results/logs/m2_detector_smoke_test.txt | pending |
 | M3 | Tracker integration on one sequence | not started | tracked video/GIF | |
 | M4 | TrackEval/evaluation working | not started | metrics CSV | |
 | M5 | Threshold sweep + latency benchmark | not started | Pareto plot | |
@@ -48,6 +48,17 @@
 | M1M | Extract KITTI tracking zips into dataset root | complete |
 | M1N | Verify extracted KITTI tracking dataset | complete |
 | M1O | Update tracker after KITTI dataset verification | complete |
+| M1P | Commit M1 dataset verification evidence | complete |
+| M2A | Create Conda detector environment | complete |
+| M2B | Install detector dependencies | complete |
+| M2C | Write YOLOv8n detector config | complete |
+| M2D | Write detector inference script | complete |
+| M2E | Run YOLOv8n detector smoke test on 10 KITTI frames | complete |
+| M2F | Commit detector smoke test script and evidence | complete |
+| M2G | Clean detector repo state and save environment | complete |
+| M2H | Commit M2 smoke-test evidence and environment | complete |
+| M2I | Run YOLOv8n detector on full KITTI sequence 0000 | complete |
+| M2J | Update M2 tracker after full detector run | complete |
 
 ## M0 evidence
 
