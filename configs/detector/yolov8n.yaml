@@ -1,0 +1,23 @@
+detector:
+  name: yolov8n
+  weights: yolov8n.pt
+  framework: ultralytics
+  device: cpu
+  image_size: 640
+  confidence_threshold: 0.25
+  iou_threshold: 0.7
+
+dataset:
+  name: kitti_tracking
+  sequence: "0000"
+  image_dir: data/kitti_tracking/training/image_02/0000
+
+outputs:
+  detections_csv: results/detections/yolov8n_seq0000_detections.csv
+  sample_visualization: results/plots/yolov8n_seq0000_sample.jpg
+  log_file: results/logs/m2_detector_smoke_test.txt
+
+notes:
+  - CPU is used first because nvidia-smi is not currently working.
+  - GPU benchmarking is postponed until the NVIDIA driver is fixed.
+  - This is detector inference only, not tracking yet.
