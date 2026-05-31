@@ -39,6 +39,7 @@ results/tables/*
 !results/sweep_results.csv
 !results/tables/
 !results/tables/dataset_summary.csv
+!results/tables/m3_tracker_summary.csv
 
 # Logs
 results/logs/*

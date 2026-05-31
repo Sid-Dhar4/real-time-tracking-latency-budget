@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M3 | in progress | run ByteTrack tracker smoke test on KITTI sequence 0000 |
+| M4 | not started | prepare evaluation/export path for KITTI tracking metrics |
 
 ## Milestone tracker
 
@@ -13,7 +13,7 @@
 | M0 | Repo skeleton + environment audit | complete | results/logs/environment_audit.txt | 76316d2 |
 | M1 | Dataset prep + split config | complete | results/tables/dataset_summary.csv | 52324da |
 | M2 | Detector inference on one sequence | complete | results/logs/m2_detector_smoke_test.txt | 93319cf |
-| M3 | Tracker integration on one sequence | in progress | results/tracks/yolov8n_bytetrack_seq0000_tracks.csv + results/videos/yolov8n_bytetrack_seq0000.mp4 | pending |
+| M3 | Tracker integration on one sequence | complete | results/logs/m3_tracker_smoke_test.txt + results/tables/m3_tracker_summary.csv | pending |
 | M4 | TrackEval/evaluation working | not started | metrics CSV | |
 | M5 | Threshold sweep + latency benchmark | not started | Pareto plot | |
 | M6 | Failure analysis | not started | failure cases page | |
@@ -30,7 +30,12 @@
 | M3B | Write ByteTrack tracker config | not started |
 | M3C | Write tracker integration script | not started |
 | M3D | Run ByteTrack tracker smoke test | not started |
-| M3E | Commit tracker smoke test evidence | not started |
+| M3E | Commit tracker smoke test evidence | complete |
+| M3F | Freeze environment after ByteTrack dependency install | complete |
+| M3G | Run ByteTrack tracker on full KITTI sequence 0000 | complete |
+| M3H | Create simple tracker summary table | complete |
+| M3I | Update project tracker and allow M3 summary evidence | complete |
+| M3J | Commit full-sequence tracker evidence | not started |
 
 ## MVP lock
 

@@ -1,0 +1,2 @@
+sequence,num_track_rows,num_frames_with_tracks,first_frame,last_frame,num_unique_track_ids,num_classes,classes,mean_latency_ms,max_latency_ms
+0000,807,154,0,153,58,7,"bicycle,bus,car,motorcycle,person,traffic light,truck",13.131682785699793,38.41553799975373
