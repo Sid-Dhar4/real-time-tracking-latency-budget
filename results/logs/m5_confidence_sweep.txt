@@ -1,0 +1,18 @@
+========== M5 CONFIDENCE THRESHOLD SWEEP ==========
+config: configs/sweeps/confidence_sweep.yaml
+sequence: 0000
+image_dir: data/kitti_tracking/training/image_02/0000
+label_file: data/kitti_tracking/training/label_02/0000.txt
+eval_class: Car
+eval_iou_threshold: 0.5
+thresholds: [0.25, 0.35, 0.5, 0.65]
+
+Important: local KITTI-style metrics, not official KITTI leaderboard metrics and not TrackEval HOTA.
+
+conf=0.25 precision=0.294 recall=0.613 idf1_like=0.310 mota_like=-0.901 fp=357 fn=94 idsw=11 mean_ms=12.34 p95_ms=15.75
+conf=0.35 precision=0.319 recall=0.617 idf1_like=0.359 mota_like=-0.733 fp=320 fn=93 idsw=8 mean_ms=11.74 p95_ms=12.28
+conf=0.50 precision=0.386 recall=0.597 idf1_like=0.430 mota_like=-0.366 fp=231 fn=98 idsw=3 mean_ms=10.90 p95_ms=12.00
+conf=0.65 precision=0.472 recall=0.444 idf1_like=0.441 mota_like=-0.062 fp=121 fn=135 idsw=2 mean_ms=10.67 p95_ms=11.15
+
+wrote_sweep_results: results/sweep_results.csv
+wrote_pareto_plot: results/plots/m5_confidence_sweep_latency_idf1.png

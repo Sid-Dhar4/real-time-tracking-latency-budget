@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M5 | not started | run confidence threshold sweep and latency summary |
+| M6 | not started | analyze false positives, missed detections, and ID switches |
 
 ## Milestone tracker
 
@@ -15,7 +15,7 @@
 | M2 | Detector inference on one sequence | complete | results/logs/m2_detector_smoke_test.txt | 93319cf |
 | M3 | Tracker integration on one sequence | complete | results/logs/m3_tracker_smoke_test.txt + results/tables/m3_tracker_summary.csv | pending |
 | M4 | Local KITTI-style evaluation working | complete | results/metrics.csv + results/logs/m4_local_eval.txt | pending |
-| M5 | Threshold sweep + latency benchmark | not started | Pareto plot | |
+| M5 | Confidence threshold sweep + latency benchmark | complete | results/sweep_results.csv + results/plots/m5_confidence_sweep_latency_idf1.png | pending |
 | M6 | Failure analysis | not started | failure cases page | |
 | M7 | README/demo/resume/interview polish | not started | final artifacts | |
 
@@ -79,3 +79,13 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 - Every result must come from a script, saved CSV, log, plot, or generated report.
 - Do not add fake metrics.
 - Do not over-scope before the MVP works.
+
+
+## M5 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M5A | Mark M5 active and allow sweep evidence | complete |
+| M5B | Write confidence sweep script | complete |
+| M5C | Run confidence threshold sweep | complete |
+| M5D | Commit sweep evidence | complete |
