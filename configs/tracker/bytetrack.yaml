@@ -1,0 +1,29 @@
+tracker:
+  name: bytetrack
+  integration: ultralytics
+  detector_weights: yolov8n.pt
+  ultralytics_tracker_config: bytetrack.yaml
+  device: cpu
+  image_size: 640
+  confidence_threshold: 0.25
+  iou_threshold: 0.7
+
+dataset:
+  name: kitti_tracking
+  sequence: "0000"
+  image_dir: data/kitti_tracking/training/image_02/0000
+
+outputs:
+  tracks_csv: results/tracks/yolov8n_bytetrack_seq0000_tracks.csv
+  video_path: results/videos/yolov8n_bytetrack_seq0000.mp4
+  log_file: results/logs/m3_tracker_smoke_test.txt
+
+video:
+  fps: 10
+
+notes:
+  - This is the first tracker integration smoke test.
+  - It uses Ultralytics ByteTrack for reliability.
+  - This produces track IDs and a visualization video.
+  - Evaluation metrics come in M4.
+  - Threshold sweeps come in M5.

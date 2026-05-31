@@ -45,6 +45,7 @@ results/logs/*
 !results/logs/.gitkeep
 !results/logs/environment_audit.txt
 !results/logs/m2_detector_smoke_test.txt
+!results/logs/m3_tracker_smoke_test.txt
 
 # System
 .DS_Store

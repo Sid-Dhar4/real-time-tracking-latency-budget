@@ -4,16 +4,16 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M2 | complete | YOLOv8n detector ran on full KITTI sequence 0000; start tracker integration next |
+| M3 | in progress | run ByteTrack tracker smoke test on KITTI sequence 0000 |
 
 ## Milestone tracker
 
 | Milestone | Goal | Status | Evidence artifact | Commit |
 | --------- | ---- | ------ | ----------------- | ------ |
 | M0 | Repo skeleton + environment audit | complete | results/logs/environment_audit.txt | 76316d2 |
-| M1 | Dataset prep + split config | complete | results/tables/dataset_summary.csv | pending |
-| M2 | Detector inference on one sequence | complete | results/detections/yolov8n_seq0000_detections.csv + results/logs/m2_detector_smoke_test.txt | pending |
-| M3 | Tracker integration on one sequence | not started | tracked video/GIF | |
+| M1 | Dataset prep + split config | complete | results/tables/dataset_summary.csv | 52324da |
+| M2 | Detector inference on one sequence | complete | results/logs/m2_detector_smoke_test.txt | 93319cf |
+| M3 | Tracker integration on one sequence | in progress | results/tracks/yolov8n_bytetrack_seq0000_tracks.csv + results/videos/yolov8n_bytetrack_seq0000.mp4 | pending |
 | M4 | TrackEval/evaluation working | not started | metrics CSV | |
 | M5 | Threshold sweep + latency benchmark | not started | Pareto plot | |
 | M6 | Failure analysis | not started | failure cases page | |
@@ -23,61 +23,14 @@
 
 | Block | Purpose | Status |
 | ----- | ------- | ------ |
-| M0A | Repair README, gitignore, tracker, and MVP scope | complete |
-| M0B | Configure local Git identity | complete |
-| M0C | Commit repo skeleton | complete |
-| M0D | Verify M0 artifacts | complete |
-| M0E | Refresh environment audit with Python3 and GPU diagnostics | complete |
-| M0F | Close M0 in project tracker | complete |
-| M0G | Commit M0 closeout | complete |
-| M0H | Final M0 verification | complete |
-| M0I | Track environment audit and finalize M0 tracker | complete |
-| M0J | Commit final M0 cleanup | complete |
-| M1A | Fix M0 tracker typo and mark M1 active | complete |
-| M1B | Write KITTI local split config | complete |
-| M1C | Write KITTI dataset verifier script | complete |
-| M1D | Create expected local KITTI dataset folders | complete |
-| M1E | Run dataset verifier before dataset download | complete |
-| M1F | Commit M1 dataset config and verifier | complete |
-| M1G | Track dataset README and dataset summary evidence | complete |
-| M1H | Commit evidence tracking fix | complete |
-| M1I | Create KITTI download staging folder | complete |
-| M1J | Find KITTI zip files in Downloads | complete |
-| M1K | Move KITTI zip files into project staging folder | complete |
-| M1L | Inspect KITTI zip contents before extraction | complete |
-| M1M | Extract KITTI tracking zips into dataset root | complete |
-| M1N | Verify extracted KITTI tracking dataset | complete |
-| M1O | Update tracker after KITTI dataset verification | complete |
-| M1P | Commit M1 dataset verification evidence | complete |
-| M2A | Create Conda detector environment | complete |
-| M2B | Install detector dependencies | complete |
-| M2C | Write YOLOv8n detector config | complete |
-| M2D | Write detector inference script | complete |
-| M2E | Run YOLOv8n detector smoke test on 10 KITTI frames | complete |
-| M2F | Commit detector smoke test script and evidence | complete |
-| M2G | Clean detector repo state and save environment | complete |
-| M2H | Commit M2 smoke-test evidence and environment | complete |
-| M2I | Run YOLOv8n detector on full KITTI sequence 0000 | complete |
-| M2J | Update M2 tracker after full detector run | complete |
-
-## M0 evidence
-
-- Repo skeleton created.
-- First commit created.
-- Environment audit saved to results/logs/environment_audit.txt.
-- Local Git identity configured for this repo.
-- Tracker file created and maintained.
-
-## M0 important findings
-
-- Ubuntu 24.04.4 LTS detected.
-- CPU: AMD Ryzen 7 8745HX with Radeon Graphics.
-- Conda detected.
-- System `python` command is not available yet.
-- System `python3` is available.
-- NVIDIA GPU is visible on PCI as an NVIDIA device.
-- NVIDIA driver is not currently working through `nvidia-smi`.
-- This GPU issue is a known risk for later GPU latency benchmarking, but it does not block M1 dataset prep.
+| M0A-M0K | Repo skeleton, environment audit, tracker cleanup | complete |
+| M1A-M1P | KITTI download, extraction, split verification | complete |
+| M2A-M2K | Conda env, YOLOv8n detector, full sequence detector run | complete |
+| M3A | Mark M3 active and allow M3 tracker log evidence | complete |
+| M3B | Write ByteTrack tracker config | not started |
+| M3C | Write tracker integration script | not started |
+| M3D | Run ByteTrack tracker smoke test | not started |
+| M3E | Commit tracker smoke test evidence | not started |
 
 ## MVP lock
 
@@ -105,6 +58,10 @@ Not yet:
 - detector training
 - multiple datasets
 - public leaderboard submission
+
+## Known risk
+
+NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tracker smoke tests use CPU. GPU benchmarking comes later.
 
 ## Rules
 
