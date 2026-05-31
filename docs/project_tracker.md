@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M6 | not started | analyze false positives, missed detections, and ID switches |
+| M7 | not started | polish README, resume bullets, screenshots, and interview notes |
 
 ## Milestone tracker
 
@@ -16,7 +16,7 @@
 | M3 | Tracker integration on one sequence | complete | results/logs/m3_tracker_smoke_test.txt + results/tables/m3_tracker_summary.csv | pending |
 | M4 | Local KITTI-style evaluation working | complete | results/metrics.csv + results/logs/m4_local_eval.txt | pending |
 | M5 | Confidence threshold sweep + latency benchmark | complete | results/sweep_results.csv + results/plots/m5_confidence_sweep_latency_idf1.png | pending |
-| M6 | Failure analysis | not started | failure cases page | |
+| M6 | Failure analysis | complete | reports/failure_analysis.md + results/failure_cases/m6_*.jpg | pending |
 | M7 | README/demo/resume/interview polish | not started | final artifacts | |
 
 ## Block tracker
@@ -89,3 +89,13 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M5B | Write confidence sweep script | complete |
 | M5C | Run confidence threshold sweep | complete |
 | M5D | Commit sweep evidence | complete |
+
+
+## M6 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M6A | Mark M6 active and allow failure-analysis evidence | complete |
+| M6B | Write failure analysis report script | complete |
+| M6C | Run failure analysis | complete |
+| M6D | Commit failure analysis evidence | complete |

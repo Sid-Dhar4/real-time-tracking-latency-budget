@@ -1,0 +1,17 @@
+========== M6 FAILURE ANALYSIS ==========
+selected_confidence_threshold: 0.65
+tracks_csv: results/tracks/sweeps/yolov8n_bytetrack_seq0000_conf_0_65_tracks.csv
+summary_csv: results/tables/m6_failure_summary.csv
+report: reports/failure_analysis.md
+failure_images_created: 6
+total_fp: 121
+total_fn: 135
+total_id_switches: 2
+
+Worst frames:
+frame=148 fp=2 fn=3 idsw=1 score=8
+frame=131 fp=1 fn=4 idsw=1 score=8
+frame=146 fp=2 fn=4 idsw=0 score=6
+frame=147 fp=2 fn=4 idsw=0 score=6
+frame=150 fp=2 fn=4 idsw=0 score=6
+frame=151 fp=2 fn=4 idsw=0 score=6

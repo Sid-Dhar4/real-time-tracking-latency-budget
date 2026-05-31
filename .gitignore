@@ -41,8 +41,11 @@ results/tables/*
 !results/tables/dataset_summary.csv
 !results/tables/m3_tracker_summary.csv
 !results/tables/m4_eval_summary.csv
+!results/tables/m6_failure_summary.csv
 !results/plots/
 !results/plots/m5_confidence_sweep_latency_idf1.png
+!results/failure_cases/
+!results/failure_cases/m6_*.jpg
 
 # Logs
 results/logs/*
@@ -52,6 +55,7 @@ results/logs/*
 !results/logs/m3_tracker_smoke_test.txt
 !results/logs/m4_local_eval.txt
 !results/logs/m5_confidence_sweep.txt
+!results/logs/m6_failure_analysis.txt
 
 # System
 .DS_Store

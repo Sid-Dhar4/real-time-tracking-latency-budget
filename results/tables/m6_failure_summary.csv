@@ -1,0 +1,2 @@
+sequence,class_name,selected_confidence_threshold,selection_rule,tracks_csv,total_frames_analyzed,total_fp,total_fn,total_id_switches,worst_frame_by_failure_score,worst_frame_failure_score,failure_images_created
+0000,Car,0.65,best_idf1_like_from_m5_sweep,results/tracks/sweeps/yolov8n_bytetrack_seq0000_conf_0_65_tracks.csv,106,121,135,2,148,8,6
