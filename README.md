@@ -46,7 +46,17 @@ Confidence threshold sweep on KITTI sequence 0000, class Car:
 
 Increasing detector confidence from 0.25 to 0.65 reduced false positives from 357 to 121 and ID switches from 11 to 2, while improving local IDF1-like score from 0.310 to 0.441. The tradeoff was lower recall: 0.613 to 0.444. Plot: results/plots/m5_confidence_sweep_latency_idf1.png
 
-## Failure analysis
+## Multi-sequence benchmark
+
+The benchmark now includes two KITTI tracking sequences for class `Car`.
+
+| sequence | GT | predictions | TP | FP | FN | IDSW | precision | recall | MOTA-like | IDF1-like |
+| -------- | -- | ----------- | -- | -- | -- | ---- | --------- | ------ | --------- | --------- |
+| 0000 | 243 | 506 | 149 | 357 | 94 | 11 | 0.294 | 0.613 | -0.901 | 0.310 |
+| 0001 | 2681 | 2300 | 1756 | 544 | 925 | 49 | 0.763 | 0.655 | 0.434 | 0.647 |
+
+This matters because sequence `0001` is longer and has many more ground-truth car instances, making the project less dependent on one short clip.
+\n## Failure analysis
 
 Failure analysis was generated for confidence 0.65.
 

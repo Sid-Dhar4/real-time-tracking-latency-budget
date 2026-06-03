@@ -32,3 +32,15 @@ Lower thresholds preserved more detections but created more noisy tracks. Higher
 3. ByteTrack vs OC-SORT comparison.
 4. Warmup-aware latency benchmark.
 5. GPU rerun after NVIDIA driver fix.
+
+
+## Multi-sequence extension
+
+Added KITTI sequence `0001` after the initial sequence `0000` MVP.
+
+| sequence | GT | predictions | precision | recall | IDF1-like | MOTA-like | IDSW |
+| -------- | -- | ----------- | --------- | ------ | --------- | --------- | ---- |
+| 0000 | 243 | 506 | 0.294 | 0.613 | 0.310 | -0.901 | 11 |
+| 0001 | 2681 | 2300 | 0.763 | 0.655 | 0.647 | 0.434 | 49 |
+
+Interpretation: sequence `0001` is a stronger benchmark slice because it contains far more ground-truth cars and a longer temporal horizon. The results show why multi-sequence reporting matters: performance varies significantly by sequence.
