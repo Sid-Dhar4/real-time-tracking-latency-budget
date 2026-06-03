@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M8 | in progress | multi-sequence benchmark: KITTI 0000 + 0001 |
+| M8 | complete | multi-sequence benchmark: KITTI 0000 + 0001 |
 
 ## Milestone tracker
 
@@ -120,4 +120,4 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M8D | Evaluate seq0001 local KITTI-style Car tracking | complete |
 | M8E | Create multi-sequence comparison table | complete |
 | M8F | Allow M8 evidence files and update tracker | complete |
-| M8G | Commit M8 evidence | not started |
+| M8G | Commit M8 evidence | complete |
