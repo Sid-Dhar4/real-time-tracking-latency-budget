@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M8 | complete | multi-sequence benchmark: KITTI 0000 + 0001 |
+| M9 | in progress | warmup-aware CPU latency summary |
 
 ## Milestone tracker
 
@@ -121,3 +121,11 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M8E | Create multi-sequence comparison table | complete |
 | M8F | Allow M8 evidence files and update tracker | complete |
 | M8G | Commit M8 evidence | complete |
+
+## M9 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M9A | Create warmup-aware latency summary | complete |
+| M9B | Allow M9 evidence and update tracker | complete |
+| M9C | Commit M9 latency evidence | not started |

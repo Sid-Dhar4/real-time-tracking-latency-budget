@@ -67,3 +67,5 @@ Thumbs.db
 !results/logs/m8_seq0001_detector.txt
 !results/logs/m8_seq0001_tracker.txt
 !results/logs/m8_seq0001_eval.txt
+!results/tables/m9_latency_summary.csv
+!reports/latency_tradeoff_report.md
