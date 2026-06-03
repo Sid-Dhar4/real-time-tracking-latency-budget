@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| MVP | complete | apply with this project while extending TrackEval/GPU/OC-SORT later |
+| M8 | in progress | multi-sequence benchmark: KITTI 0000 + 0001 |
 
 ## Milestone tracker
 
@@ -109,3 +109,15 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M7B | Write portfolio polish docs | complete |
 | M7C | Verify README, reports, resume bullets, and interview notes | complete |
 | M7D | Commit M7 portfolio polish | complete |
+
+## M8 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M8A | Verify MVP clean state and seq0001 dataset | complete |
+| M8B | Create seq0001 configs and patch evaluator | complete |
+| M8C | Run detector and tracker on seq0001 | complete |
+| M8D | Evaluate seq0001 local KITTI-style Car tracking | complete |
+| M8E | Create multi-sequence comparison table | complete |
+| M8F | Allow M8 evidence files and update tracker | complete |
+| M8G | Commit M8 evidence | not started |

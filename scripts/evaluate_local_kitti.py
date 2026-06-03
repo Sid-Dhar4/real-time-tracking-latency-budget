@@ -200,6 +200,7 @@ def main() -> int:
     parser.add_argument("--metrics-csv", type=Path, default=Path("results/metrics.csv"))
     parser.add_argument("--summary-csv", type=Path, default=Path("results/tables/m4_eval_summary.csv"))
     parser.add_argument("--log-file", type=Path, default=Path("results/logs/m4_local_eval.txt"))
+    parser.add_argument("--sequence", type=str, default="0000")
     args = parser.parse_args()
 
     gt = load_kitti_gt(args.label_file, args.class_name)
@@ -212,7 +213,7 @@ def main() -> int:
     args.log_file.parent.mkdir(parents=True, exist_ok=True)
 
     metric_row = {
-        "sequence": "0000",
+        "sequence": args.sequence,
         "class_name": args.class_name,
         "iou_threshold": args.iou_threshold,
         "total_gt": results["total_gt"],
