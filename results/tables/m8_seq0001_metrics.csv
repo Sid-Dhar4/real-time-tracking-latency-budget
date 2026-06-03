@@ -1,0 +1,2 @@
+sequence,class_name,iou_threshold,total_gt,total_pred,tp,fp,fn,id_switches,precision,recall,mota_like,idf1_like,idtp_like,idfp_like,idfn_like,evaluator
+0001,Car,0.5,2681,2300,1756,544,925,49,0.7634782608695653,0.6549794852666916,0.433793360686311,0.6472595864284281,1612,688,1069,local_kitti_style_not_official_trackeval

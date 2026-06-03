@@ -1,0 +1,26 @@
+========== M4 LOCAL KITTI-STYLE EVALUATION ==========
+label_file: data/kitti_tracking/training/label_02/0001.txt
+tracks_csv: results/tracks/yolov8n_bytetrack_seq0001_tracks.csv
+class_name: Car
+iou_threshold: 0.5
+
+Important:
+These are local KITTI-style metrics, not official KITTI leaderboard metrics and not TrackEval HOTA yet.
+
+sequence: 0001
+class_name: Car
+iou_threshold: 0.5
+total_gt: 2681
+total_pred: 2300
+tp: 1756
+fp: 544
+fn: 925
+id_switches: 49
+precision: 0.7634782608695653
+recall: 0.6549794852666916
+mota_like: 0.433793360686311
+idf1_like: 0.6472595864284281
+idtp_like: 1612
+idfp_like: 688
+idfn_like: 1069
+evaluator: local_kitti_style_not_official_trackeval

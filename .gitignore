@@ -60,3 +60,10 @@ results/logs/*
 # System
 .DS_Store
 Thumbs.db
+!results/tables/m8_seq0001_dataset_check.csv
+!results/tables/m8_seq0001_metrics.csv
+!results/tables/m8_seq0001_eval_summary.csv
+!results/tables/m8_multiseq_summary.csv
+!results/logs/m8_seq0001_detector.txt
+!results/logs/m8_seq0001_tracker.txt
+!results/logs/m8_seq0001_eval.txt
