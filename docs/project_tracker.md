@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M7 | not started | polish README, resume bullets, screenshots, and interview notes |
+| MVP | complete | apply with this project while extending TrackEval/GPU/OC-SORT later |
 
 ## Milestone tracker
 
@@ -17,7 +17,7 @@
 | M4 | Local KITTI-style evaluation working | complete | results/metrics.csv + results/logs/m4_local_eval.txt | pending |
 | M5 | Confidence threshold sweep + latency benchmark | complete | results/sweep_results.csv + results/plots/m5_confidence_sweep_latency_idf1.png | pending |
 | M6 | Failure analysis | complete | reports/failure_analysis.md + results/failure_cases/m6_*.jpg | pending |
-| M7 | README/demo/resume/interview polish | not started | final artifacts | |
+| M7 | README/demo/resume/interview polish | complete | README.md + docs/resume_bullets.md + docs/interview_notes.md | pending |
 
 ## Block tracker
 
@@ -99,3 +99,13 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M6B | Write failure analysis report script | complete |
 | M6C | Run failure analysis | complete |
 | M6D | Commit failure analysis evidence | complete |
+
+
+## M7 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M7A | Mark M7 active | complete |
+| M7B | Write portfolio polish docs | complete |
+| M7C | Verify README, reports, resume bullets, and interview notes | complete |
+| M7D | Commit M7 portfolio polish | complete |
