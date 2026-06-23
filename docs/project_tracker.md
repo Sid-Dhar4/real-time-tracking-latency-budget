@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M24 | complete | README and summary consistency cleanup |
+| M25 | complete | typed ROS 2 tracking and diagnostic topics |
 
 ## Milestone tracker
 
@@ -263,3 +263,12 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M24A | Audit reviewer consistency issues | complete |
 | M24B | Fix README and final summary stale wording | complete |
 | M24C | Run consistency checks and update tracker | complete |
+
+## M25 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M25A | Check ROS typed-message dependencies | complete |
+| M25B | Add vision_msgs Detection2DArray and diagnostic_msgs DiagnosticArray publishers | complete |
+| M25C | Rebuild and smoke-test typed ROS topics | complete |
+| M25D | Document typed ROS topics and update checks | complete |

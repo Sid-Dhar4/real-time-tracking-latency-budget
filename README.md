@@ -9,7 +9,9 @@ Click the animation to open the full annotated demo video.
 This repository demonstrates a reproducible robotics perception benchmark for tracking-by-detection under latency and robustness constraints.
 
 | Result area | Evidence |
-| ----------- | -------- |
+| ----------- 
+- | -------- 
+- |
 | Six-sequence TrackEval benchmark | HOTA `46.634`, MOTA `50.354`, IDF1 `61.903` on sequences `0000`–`0005` |
 | Two-sequence TrackEval baseline | HOTA `49.412`, MOTA `52.312`, IDF1 `68.385` on sequences `0000`–`0001` |
 | Tracker comparison | ByteTrack IDF1 `68.385` vs simple IoU tracker IDF1 `58.949` |
@@ -20,16 +22,23 @@ This repository demonstrates a reproducible robotics perception benchmark for tr
 
 Core artifacts:
 
+- 
 - `reports/trackeval_results.md`
+- 
 - `reports/trackeval_stress_test.md`
+- 
 - `reports/tracker_comparison.md`
+- 
 - `reports/runtime_analysis.md`
+- 
 - `results/videos/m11_seq0001_demo_overlay.mp4`
 
 ## Visual artifacts
 
 | Artifact | Path |
-| -------- | ---- |
+| -------- 
+- | ---- 
+- |
 | Clickable README teaser GIF | `media/tracking_latency_teaser.gif` |
 | Full annotated demo video | `media/tracking_latency_demo.mp4` |
 | Demo poster frame | `media/tracking_latency_poster.jpg` |
@@ -75,8 +84,11 @@ python -m pip install -r environment/requirements-dev.txt
 
 Environment files:
 
+- 
 - `environment/requirements-minimal.txt`: runtime dependencies for benchmark scripts.
+- 
 - `environment/requirements-dev.txt`: runtime dependencies plus test tooling.
+- 
 - `environment/environment-lock-full.txt`: archived local full freeze, not the recommended install path.
 
 ## Dataset
@@ -87,15 +99,22 @@ KITTI tracking training split with a local validation subset only. No public lea
 
 MVP:
 
+- 
 - YOLOv8n detector
+- 
 - ByteTrack tracker
 
 Implemented and future extensions after MVP:
 
+- 
 - OC-SORT
+- 
 - second detector
+- 
 - CPU/GPU or ONNX comparison
-- ROS 2 replay wrapper (complete); typed messages/debug image are future work
+- 
+- ROS 2 replay wrapper with typed  and  outputs (complete); debug image is future work
+- 
 - optional C++ association module
 
 ## Pipeline
@@ -107,7 +126,17 @@ KITTI frames -> detector -> detections -> tracker -> tracks -> evaluation -> met
 Confidence threshold sweep on KITTI sequence 0000, class Car:
 
 | conf | precision | recall | IDF1-like | MOTA-like | FP | FN | IDSW | mean ms | p95 ms |
-| ---- | --------- | ------ | --------- | --------- | -- | -- | ---- | ------- | ------ |
+| ---- 
+- | --------- 
+- | ------ 
+- | --------- 
+- | --------- 
+- | -- 
+- | -- 
+- | ---- 
+- | ------- 
+- | ------ 
+- |
 | 0.25 | 0.294 | 0.613 | 0.310 | -0.901 | 357 | 94 | 11 | 12.34 | 15.75 |
 | 0.35 | 0.319 | 0.617 | 0.359 | -0.733 | 320 | 93 | 8 | 11.74 | 12.28 |
 | 0.50 | 0.386 | 0.597 | 0.430 | -0.366 | 231 | 98 | 3 | 10.90 | 12.00 |
@@ -122,7 +151,18 @@ Increasing detector confidence from 0.25 to 0.65 reduced false positives from 35
 This earlier local diagnostic table uses KITTI sequences `0000` and `0001` for class `Car`. The primary benchmark is the six-sequence native TrackEval section.
 
 | sequence | GT | predictions | TP | FP | FN | IDSW | precision | recall | MOTA-like | IDF1-like |
-| -------- | -- | ----------- | -- | -- | -- | ---- | --------- | ------ | --------- | --------- |
+| -------- 
+- | -- 
+- | ----------- 
+- | -- 
+- | -- 
+- | -- 
+- | ---- 
+- | --------- 
+- | ------ 
+- | --------- 
+- | --------- 
+- |
 | 0000 | 243 | 506 | 149 | 357 | 94 | 11 | 0.294 | 0.613 | -0.901 | 0.310 |
 | 0001 | 2681 | 2300 | 1756 | 544 | 925 | 49 | 0.763 | 0.655 | 0.434 | 0.647 |
 
@@ -131,8 +171,11 @@ This matters because sequence `0001` is longer and has many more ground-truth ca
 
 Annotated demo artifacts are included for KITTI sequence `0001`:
 
+- 
 - Video: `results/videos/m11_seq0001_demo_overlay.mp4`
+- 
 - Sample frame: `results/plots/m11_seq0001_demo_frame.jpg`
+- 
 - Notes: `reports/demo_notes.md`
 
 The overlay shows track boxes, track IDs, class names, confidence scores, frame number, and per-frame tracker latency.
@@ -141,15 +184,22 @@ The overlay shows track boxes, track IDs, class names, confidence scores, frame 
 
 Failure analysis was generated for confidence 0.65.
 
+- 
 - False positives: 121
+- 
 - False negatives / missed GT boxes: 135
+- 
 - ID switches: 2
+- 
 - Failure images created: 6
+- 
 - Worst frames: 148, 131, 146, 147, 150, 151
 
 Artifacts:
 
+- 
 - reports/failure_analysis.md
+- 
 - results/failure_cases/
 
 ## Reproduce
@@ -180,18 +230,28 @@ The benchmark was expanded from two KITTI tracking sequences to six sequences: `
 
 Combined native TrackEval KITTI results for ByteTrack on class `car`:
 
+- 
 - HOTA: `46.634`
+- 
 - MOTA: `50.354`
+- 
 - IDF1: `61.903`
+- 
 - GT detections: `5793`
+- 
 - Tracker detections: `3780`
+- 
 - ID switches: `121`
 
 Artifacts:
 
+- 
 - `reports/trackeval_6seq_results.md`
+- 
 - `results/tables/m21_trackeval_6seq_summary.csv`
+- 
 - `results/plots/m21_trackeval_6seq_metrics.png`
+- 
 - `results/trackeval_6seq/m21_car_summary.txt`
 
 ## TrackEval KITTI metrics
@@ -200,21 +260,31 @@ Native TrackEval KITTI 2D box evaluation was run for class `car` on KITTI tracki
 
 Combined results:
 
+- 
 - HOTA: `49.412`
+- 
 - MOTA: `52.312`
+- 
 - IDF1: `68.385`
 
 Per-sequence highlights:
 
 | sequence | HOTA | MOTA | IDF1 |
-| -------- | ---- | ---- | ---- |
+| -------- 
+- | ---- 
+- | ---- 
+- | ---- 
+- |
 | 0000 | 43.489 | 25.581 | 51.084 |
 | 0001 | 50.009 | 54.842 | 70.177 |
 
 Artifacts:
 
+- 
 - `reports/trackeval_results.md`
+- 
 - `results/trackeval/m13_car_summary.txt`
+- 
 - `results/trackeval/m13_car_detailed.csv`
 
 These are TrackEval metrics, not a public KITTI leaderboard submission.
@@ -226,7 +296,11 @@ A TrackEval stress test was added by removing tracker outputs from every Nth fra
 Combined TrackEval results:
 
 | variant | HOTA | MOTA | IDF1 |
-| ------- | ---- | ---- | ---- |
+| ------- 
+- | ---- 
+- | ---- 
+- | ---- 
+- |
 | baseline | 49.412 | 52.312 | 68.385 |
 | drop every 5th frame | 39.974 | 41.496 | 59.737 |
 | drop every 3rd frame | 33.765 | 34.700 | 53.454 |
@@ -234,8 +308,11 @@ Combined TrackEval results:
 
 Artifacts:
 
+- 
 - `reports/trackeval_stress_test.md`
+- 
 - `results/tables/m14_trackeval_stress_summary.csv`
+- 
 - `results/plots/m14_trackeval_stress_metrics.png`
 
 This demonstrates sensitivity to intermittent detector/tracker output under simulated dropped-frame perception failures.
@@ -247,7 +324,15 @@ A simple IoU tracker baseline was added and compared against ByteTrack using the
 Combined TrackEval results:
 
 | tracker | HOTA | MOTA | IDF1 | IDSW | FP | FN | IDs |
-| ------- | ---- | ---- | ---- | ---- | -- | -- | --- |
+| ------- 
+- | ---- 
+- | ---- 
+- | ---- 
+- | ---- 
+- | -- 
+- | -- 
+- | --- 
+- |
 | ByteTrack | 49.412 | 52.312 | 68.385 | 42 | 296 | 848 | 135 |
 | Simple IoU tracker | 48.814 | 45.879 | 58.949 | 197 | 705 | 444 | 436 |
 
@@ -255,16 +340,22 @@ The IoU tracker keeps more detections and achieves higher recall, but creates fa
 
 Artifacts:
 
+- 
 - `reports/tracker_comparison.md`
+- 
 - `results/tables/m15_tracker_comparison.csv`
+- 
 - `results/plots/m15_tracker_comparison_metrics.png`
 
 ## Runtime analysis
 
 Warmup-aware CPU latency plots are included:
 
+- 
 - Histogram: `results/plots/m12_latency_histogram.png`
+- 
 - Summary bar plot: `results/plots/m12_latency_summary_bar.png`
+- 
 - Report: `reports/runtime_analysis.md`
 
 The first 5 frames are excluded as warmup. These are CPU-only measurements because NVIDIA driver support was not working through `nvidia-smi` during this project.
