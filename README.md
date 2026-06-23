@@ -1,5 +1,9 @@
 # Real-Time Object Tracking Under a Robotics Latency Budget
 
+[![tests](https://github.com/Sid-Dhar4/real-time-tracking-latency-budget/actions/workflows/tests.yml/badge.svg)](https://github.com/Sid-Dhar4/real-time-tracking-latency-budget/actions/workflows/tests.yml)
+[![release](https://img.shields.io/badge/release-v1.0.0-blue)](docs/release_notes_v1.0.0.md)
+[![ROS 2](https://img.shields.io/badge/ROS%202-Jazzy-blueviolet)](docs/ros2_replay_wrapper.md)
+
 [![Tracking latency demo](media/tracking_latency_teaser.gif)](media/tracking_latency_demo.mp4)
 
 Click the animation to open the full annotated demo video.
@@ -54,6 +58,14 @@ Robot perception systems must trade off accuracy and latency. A tracker that is 
 A ROS 2 Jazzy wrapper replays saved KITTI tracking outputs and publishes JSON compatibility topics, typed robotics-native tracking outputs, diagnostics, latency-probe support, and annotated debug images: `/tracking/objects`, `/tracking/status`, `/tracking/detections_2d`, `/tracking/diagnostics`, and `/tracking/debug_image`.
 
 Documentation: `docs/ros2_replay_wrapper.md` and `ros2/ros2_tracking_latency`.
+
+## Release
+
+Current release: `v1.0.0`
+
+- Release notes: `docs/release_notes_v1.0.0.md`
+- Tag: `v1.0.0`
+- Scope: six-sequence KITTI TrackEval benchmark, dropped-frame stress tests, tracker comparison, latency analysis, ROS 2 typed topics, diagnostics latency probe, and debug image replay.
 
 ## Reproducibility checks
 
@@ -278,4 +290,4 @@ The detector uses pretrained YOLOv8n weights, not KITTI-specific training; GPU b
 
 ## Future work
 
-OC-SORT comparison, second detector, ONNX inference, ROS 2 typed messages/debug image, C++ association module, nuScenes-mini, and real camera video.
+OC-SORT comparison, second detector, ONNX/GPU timing after driver support, C++ association module, nuScenes-mini, real camera video, and an optional live ROS 2 detector/tracker node.
