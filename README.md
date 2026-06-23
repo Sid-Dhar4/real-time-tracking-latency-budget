@@ -6,7 +6,7 @@ This repository demonstrates a reproducible robotics perception benchmark for tr
 
 | Result area | Evidence |
 | ----------- | -------- |
-| Multi-sequence KITTI benchmark | sequences `0000` and `0001` |
+| Multi-sequence KITTI benchmark | sequences `0000`–`0005` |
 | Native TrackEval KITTI metrics | HOTA `49.412`, MOTA `52.312`, IDF1 `68.385` for ByteTrack |
 | Tracker comparison | ByteTrack IDF1 `68.385` vs simple IoU tracker IDF1 `58.949` |
 | Robustness stress test | HOTA drops from `49.412` to `25.852` when every 2nd frame is removed |
@@ -151,6 +151,26 @@ python scripts/make_failure_report.py
 ## Tests
 
 Tests cover result schemas, tracked benchmark artifacts, and KITTI label-format sanity checks via `scripts/run_tests.sh`.
+
+## Six-sequence TrackEval benchmark
+
+The benchmark was expanded from two KITTI tracking sequences to six sequences: `0000`–`0005`.
+
+Combined native TrackEval KITTI results for ByteTrack on class `car`:
+
+- HOTA: `46.634`
+- MOTA: `50.354`
+- IDF1: `61.903`
+- GT detections: `5793`
+- Tracker detections: `3780`
+- ID switches: `121`
+
+Artifacts:
+
+- `reports/trackeval_6seq_results.md`
+- `results/tables/m21_trackeval_6seq_summary.csv`
+- `results/plots/m21_trackeval_6seq_metrics.png`
+- `results/trackeval_6seq/m21_car_summary.txt`
 
 ## TrackEval KITTI metrics
 

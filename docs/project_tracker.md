@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M20 | complete | stronger unit tests for tracker logic and benchmark artifacts |
+| M21 | complete | six-sequence KITTI TrackEval benchmark coverage |
 
 ## Milestone tracker
 
@@ -225,3 +225,14 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M20A | Add simple IoU tracker unit tests | complete |
 | M20B | Add benchmark artifact and metric sanity tests | complete |
 | M20C | Document stronger tests and update tracker | complete |
+
+## M21 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M21A | Create configs for KITTI sequences 0002-0005 | complete |
+| M21B | Run full detector and ByteTrack outputs for 0002-0005 | complete |
+| M21C | Export all six sequences to native TrackEval format | complete |
+| M21D | Run six-sequence native TrackEval evaluation | complete |
+| M21E | Summarize six-sequence benchmark artifacts | complete |
+| M21F | Document and commit six-sequence benchmark | in progress |

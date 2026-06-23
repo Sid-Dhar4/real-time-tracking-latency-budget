@@ -1,0 +1,12 @@
+========== M2 DETECTOR SMOKE TEST ==========
+config: configs/detector/yolov8n_seq0005.yaml
+weights: yolov8n.pt
+device: cpu
+image_dir: data/kitti_tracking/training/image_02/0005
+frames_processed: 297
+detections_written: 1546
+detections_csv: results/detections/yolov8n_seq0005_detections.csv
+sample_visualization: results/plots/yolov8n_seq0005_sample.jpg
+mean_latency_ms: 11.32
+p95_latency_ms: 11.88
+fps_estimate: 88.31

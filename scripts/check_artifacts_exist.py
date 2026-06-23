@@ -17,6 +17,10 @@ REQUIRED_FILES = [
     "results/plots/m14_trackeval_stress_metrics.png",
     "results/plots/m15_tracker_comparison_metrics.png",
     "results/videos/m11_seq0001_demo_overlay.mp4",
+    "reports/trackeval_6seq_results.md",
+    "results/tables/m21_trackeval_6seq_summary.csv",
+    "results/plots/m21_trackeval_6seq_metrics.png",
+    "results/trackeval_6seq/m21_car_summary.txt",
 ]
 
 FORBIDDEN_README_PHRASES = [

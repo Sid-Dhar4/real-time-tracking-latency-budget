@@ -1,0 +1,25 @@
+tracker:
+  name: bytetrack
+  integration: ultralytics
+  detector_weights: yolov8n.pt
+  ultralytics_tracker_config: bytetrack.yaml
+  device: cpu
+  image_size: 640
+  confidence_threshold: 0.25
+  iou_threshold: 0.7
+
+dataset:
+  name: kitti_tracking
+  sequence: "0005"
+  image_dir: data/kitti_tracking/training/image_02/0005
+
+outputs:
+  tracks_csv: results/tracks/yolov8n_bytetrack_seq0005_tracks.csv
+  video_path: results/videos/yolov8n_bytetrack_seq0005.mp4
+  log_file: results/logs/m21_seq0005_tracker.txt
+
+video:
+  fps: 10
+
+notes:
+  - ByteTrack extension sequence for multi-sequence benchmark coverage.

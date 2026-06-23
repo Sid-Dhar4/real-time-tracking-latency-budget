@@ -1,0 +1,14 @@
+========== M3 TRACKER SMOKE TEST ==========
+config: configs/tracker/bytetrack_seq0002.yaml
+weights: yolov8n.pt
+tracker_config: bytetrack.yaml
+device: cpu
+image_dir: data/kitti_tracking/training/image_02/0002
+frames_processed: 233
+track_rows_written: 794
+unique_track_ids: 48
+tracks_csv: results/tracks/yolov8n_bytetrack_seq0002_tracks.csv
+video_path: results/videos/yolov8n_bytetrack_seq0002.mp4
+mean_latency_ms: 12.17
+p95_latency_ms: 14.33
+fps_estimate: 82.15
