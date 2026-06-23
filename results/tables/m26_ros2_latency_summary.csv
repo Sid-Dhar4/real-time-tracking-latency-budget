@@ -1,0 +1,2 @@
+samples,sequence,fps,ros_receive_latency_mean_ms,ros_receive_latency_p50_ms,ros_receive_latency_p95_ms,ros_receive_latency_max_ms,publish_latency_mean_ms,publish_latency_p50_ms,publish_latency_p95_ms,publish_latency_max_ms
+30,0001,10.0,0.5121469497680664,0.4944801330566406,0.6079673767089844,0.8976459503173828,0.1252223005091461,0.12229349886183627,0.15553900448139757,0.28614299662876874

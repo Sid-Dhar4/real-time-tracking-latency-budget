@@ -24,6 +24,10 @@ REQUIRED_FILES = [
     "results/tables/m21_trackeval_6seq_summary.csv",
     "results/plots/m21_trackeval_6seq_metrics.png",
     "results/trackeval_6seq/m21_car_summary.txt",
+    "results/tables/m26_ros2_latency_summary.csv",
+    "scripts/ros2_diagnostic_latency_probe.py",
+    "reports/ros2_latency_probe.md",
+    "reports/ros2_typed_topics.md",
 ]
 
 FORBIDDEN_README_PHRASES = [

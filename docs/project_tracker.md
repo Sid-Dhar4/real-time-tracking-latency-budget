@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M25 | complete | typed ROS 2 tracking and diagnostic topics |
+| M26 | complete | ROS 2 diagnostics latency probe |
 
 ## Milestone tracker
 
@@ -272,3 +272,12 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M25B | Add vision_msgs Detection2DArray and diagnostic_msgs DiagnosticArray publishers | complete |
 | M25C | Rebuild and smoke-test typed ROS topics | complete |
 | M25D | Document typed ROS topics and update checks | complete |
+
+## M26 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M26A | Create diagnostics latency probe script | complete |
+| M26B | Run ROS 2 replay and collect diagnostics latency CSV | complete |
+| M26C | Summarize latency probe results | complete |
+| M26D | Update docs, artifact checks, and commit | complete |

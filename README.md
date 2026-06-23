@@ -19,6 +19,7 @@ This repository demonstrates a reproducible robotics perception benchmark for tr
 | Latency analysis | warmup-aware CPU p95 tracker latency around `16 ms` |
 | Visual demo | annotated KITTI sequence `0001` overlay video |
 | Failure analysis | worst-frame examples and ID-switch analysis |
+| ROS 2 diagnostics latency probe | `/tracking/diagnostics` receive p95 `0.608 ms`; internal publish p95 `0.156 ms` at 10 FPS replay |
 
 Core artifacts:
 
