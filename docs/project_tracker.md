@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M15 | complete | ByteTrack vs simple IoU tracker comparison |
+| M16 | complete | final README key results and project summary |
 
 ## Milestone tracker
 
@@ -194,3 +194,10 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M15D | Run TrackEval tracker comparison | complete |
 | M15E | Summarize tracker comparison | complete |
 | M15F | Commit tracker comparison evidence | complete |
+
+## M16 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M16A | Add README key-results section and final project summary | complete |
+| M16B | Commit final README/project summary polish | complete |
