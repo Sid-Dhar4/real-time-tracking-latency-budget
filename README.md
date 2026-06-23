@@ -57,7 +57,7 @@ Robot perception systems must trade off accuracy and latency. A tracker that is 
 
 ## ROS 2 replay wrapper
 
-A ROS 2 Jazzy wrapper replays saved KITTI tracking outputs and publishes JSON messages on `/tracking/objects` and `/tracking/status`.
+A ROS 2 Jazzy wrapper replays saved KITTI tracking outputs and publishes both JSON compatibility topics and typed robotics-native topics: `/tracking/objects`, `/tracking/status`, `/tracking/detections_2d`, and `/tracking/diagnostics`.
 
 Documentation: `docs/ros2_replay_wrapper.md` and `ros2/ros2_tracking_latency`.
 

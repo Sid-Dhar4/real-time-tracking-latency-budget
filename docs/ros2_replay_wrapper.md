@@ -12,6 +12,8 @@ It replays tracked objects from CSV and publishes JSON messages on ROS 2 topics.
 
 - `/tracking/objects` (`std_msgs/String`): per-frame tracked objects as JSON.
 - `/tracking/status` (`std_msgs/String`): replay status, frame index, number of tracks, FPS, and publish latency.
+- `/tracking/detections_2d` (`vision_msgs/Detection2DArray`): typed 2D tracked-object outputs.
+- `/tracking/diagnostics` (`diagnostic_msgs/DiagnosticArray`): typed replay diagnostics.
 
 ## Build
 
@@ -61,4 +63,4 @@ The wrapper was built with `colcon`, discovered by `ros2 pkg executables`, run t
 
 ## Design note
 
-The first wrapper intentionally avoids `cv_bridge` and image publishing because the benchmark Conda environment uses a different Python/NumPy stack than ROS 2 Jazzy system Python. The MVP publishes tracking objects and status first, which is robust and enough to demonstrate robotics integration.
+The wrapper now publishes typed `vision_msgs/Detection2DArray` and `diagnostic_msgs/DiagnosticArray` topics in addition to JSON compatibility topics. Image publishing remains a future extension so the benchmark pipeline can stay cleanly separated from ROS image transport and visualization dependencies.
