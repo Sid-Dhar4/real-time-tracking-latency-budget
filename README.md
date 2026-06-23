@@ -103,6 +103,16 @@ python scripts/make_failure_report.py
 
 Tests will cover dataset parsing, detection/tracking formats, latency parsing, and result schemas.
 
+## Runtime analysis
+
+Warmup-aware CPU latency plots are included:
+
+- Histogram: `results/plots/m12_latency_histogram.png`
+- Summary bar plot: `results/plots/m12_latency_summary_bar.png`
+- Report: `reports/runtime_analysis.md`
+
+The first 5 frames are excluded as warmup. These are CPU-only measurements because NVIDIA driver support was not working through `nvidia-smi` during this project.
+
 ## Limitations
 
 Initial MVP uses pretrained detection and a small local KITTI validation split.
