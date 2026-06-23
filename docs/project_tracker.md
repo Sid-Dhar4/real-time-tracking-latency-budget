@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M9 | complete | warmup-aware CPU latency summary |
+| M10 | complete | schema tests and safe pytest runner |
 
 ## Milestone tracker
 
@@ -132,3 +132,15 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 
 | M9D | Rebuild latency report without tabulate | complete |
 | M9E | Commit fixed latency report and mark M9 complete | complete |
+
+## M10 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M10A | Add schema and result sanity tests | complete |
+| M10B | Initial pytest run exposed ROS plugin issue | complete |
+| M10E | Run tests with ROS pytest plugin autoload disabled | complete |
+| M10F | Add safe pytest runner | complete |
+| M10H | Fix sequence ID normalization in tests | complete |
+| M10I | Rerun schema tests successfully | complete |
+| M10J | Commit and push passing schema tests | complete |
