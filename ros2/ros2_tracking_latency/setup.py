@@ -19,6 +19,7 @@ setup(
     entry_points={
         "console_scripts": [
             "kitti_track_replay = ros2_tracking_latency.kitti_track_replay_node:main",
+            "kitti_debug_image_replay = ros2_tracking_latency.kitti_debug_image_replay_node:main",
         ],
     },
 )

@@ -14,6 +14,7 @@ It replays tracked objects from CSV and publishes JSON messages on ROS 2 topics.
 - `/tracking/status` (`std_msgs/String`): replay status, frame index, number of tracks, FPS, and publish latency.
 - `/tracking/detections_2d` (`vision_msgs/Detection2DArray`): typed 2D tracked-object outputs.
 - `/tracking/diagnostics` (`diagnostic_msgs/DiagnosticArray`): typed replay diagnostics.
+- `/tracking/debug_image` (`sensor_msgs/Image`): annotated KITTI frames with tracking boxes and IDs.
 
 ## Build
 

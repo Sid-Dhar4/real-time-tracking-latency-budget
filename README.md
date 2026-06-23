@@ -20,6 +20,7 @@ This repository demonstrates a reproducible robotics perception benchmark for tr
 | Visual demo | annotated KITTI sequence `0001` overlay video |
 | Failure analysis | worst-frame examples and ID-switch analysis |
 | ROS 2 diagnostics latency probe | `/tracking/diagnostics` receive p95 `0.608 ms`; internal publish p95 `0.156 ms` at 10 FPS replay |
+| ROS 2 debug image topic | publishes annotated KITTI frames on `/tracking/debug_image` as `sensor_msgs/Image` |
 
 Core artifacts:
 
@@ -43,6 +44,7 @@ Core artifacts:
 | Clickable README teaser GIF | `media/tracking_latency_teaser.gif` |
 | Full annotated demo video | `media/tracking_latency_demo.mp4` |
 | Demo poster frame | `media/tracking_latency_poster.jpg` |
+| ROS 2 debug image sample | `media/tracking_debug_image_sample.jpg` |
 | Latency distribution plot | `results/plots/m12_latency_histogram.png` |
 | Dropped-frame stress plot | `results/plots/m14_trackeval_stress_metrics.png` |
 | Tracker comparison plot | `results/plots/m15_tracker_comparison_metrics.png` |

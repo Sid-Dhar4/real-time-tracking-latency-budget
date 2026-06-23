@@ -28,6 +28,9 @@ REQUIRED_FILES = [
     "scripts/ros2_diagnostic_latency_probe.py",
     "reports/ros2_latency_probe.md",
     "reports/ros2_typed_topics.md",
+    "reports/ros2_debug_image_replay.md",
+    "media/tracking_debug_image_sample.jpg",
+    "ros2/ros2_tracking_latency/ros2_tracking_latency/kitti_debug_image_replay_node.py",
 ]
 
 FORBIDDEN_README_PHRASES = [

@@ -22,6 +22,7 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 - Simple IoU tracker baseline for algorithm comparison
 - Tests for schema and dataset sanity
 - ROS 2 diagnostics latency probe for typed replay topics
+- ROS 2 debug image replay topic for annotated KITTI tracking frames
 
 ## Strongest measured results
 
@@ -31,6 +32,7 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 - Dropped-frame stress test: HOTA degrades from `49.412` baseline to `25.852` when every 2nd frame is removed
 - Warmup-aware CPU tracker p95 latency is approximately `16 ms` on both evaluated sequences
 - ROS 2 diagnostics latency probe: receive p95 `0.608 ms`, internal publish p95 `0.156 ms` at 10 FPS replay
+- ROS 2 debug image topic publishes annotated `sensor_msgs/Image` frames with track boxes and IDs
 
 ## Honest caveats
 
