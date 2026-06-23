@@ -49,7 +49,7 @@ def test_multiseq_summary_schema():
             "fn", "id_switches", "precision", "recall", "mota_like", "idf1_like",
         ],
     )
-    assert set(df["sequence"].astype(str)) == {"0000", "0001"}
+    assert set(df["sequence"].astype(str).str.zfill(4)) == {"0000", "0001"}
     assert df["total_gt"].gt(0).all()
 
 
@@ -63,7 +63,7 @@ def test_latency_summary_schema():
         ],
     )
     assert set(df["stage"]) == {"detector", "tracker"}
-    assert set(df["sequence"].astype(str)) == {"0000", "0001"}
+    assert set(df["sequence"].astype(str).str.zfill(4)) == {"0000", "0001"}
     assert df["frames_used"].gt(0).all()
     assert df["mean_ms"].gt(0).all()
     assert df["p95_ms"].ge(df["p50_ms"]).all()
