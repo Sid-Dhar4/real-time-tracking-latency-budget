@@ -10,7 +10,7 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 
 ## What was built
 
-- KITTI tracking benchmark pipeline for sequences `0000` and `0001`
+- KITTI tracking benchmark pipeline for sequences `0000`–`0005`
 - YOLOv8n detector outputs
 - ByteTrack tracker outputs
 - Local KITTI-style evaluator
@@ -24,8 +24,8 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 
 ## Strongest measured results
 
-- ByteTrack native TrackEval combined results: HOTA `49.412`, MOTA `52.312`, IDF1 `68.385`
-- ByteTrack vs simple IoU tracker: IDF1 `68.385` vs `58.949`
+- Six-sequence ByteTrack native TrackEval combined results: HOTA `46.634`, MOTA `50.354`, IDF1 `61.903` across `5,793` ground-truth detections
+- Two-sequence controlled tracker comparison: ByteTrack IDF1 `68.385` vs simple IoU tracker IDF1 `58.949`
 - ByteTrack vs simple IoU tracker: ID switches `42` vs `197`
 - Dropped-frame stress test: HOTA degrades from `49.412` baseline to `25.852` when every 2nd frame is removed
 - Warmup-aware CPU tracker p95 latency is approximately `16 ms` on both evaluated sequences
@@ -39,4 +39,4 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 
 ## Interview explanation
 
-I built this project to study the robotics perception tradeoff between detection quality, tracker identity consistency, and runtime latency. The system runs YOLOv8n detections on KITTI tracking sequences, tracks objects with ByteTrack, evaluates using both local KITTI-style metrics and native TrackEval KITTI metrics, and then analyzes how performance changes under confidence thresholds, dropped-frame failures, and a simple IoU tracker baseline. The key result is that ByteTrack gives stronger identity consistency than a geometric IoU baseline, while dropped-frame stress tests show how intermittent perception output causes HOTA, MOTA, and IDF1 to degrade.
+I built this project to study robotics perception reliability under detection, association, latency, and dropped-frame constraints. The system runs YOLOv8n detections on KITTI tracking sequences `0000`–`0005`, tracks objects with ByteTrack, evaluates with native TrackEval KITTI HOTA/MOTA/IDF1, and adds local diagnostics for threshold sweeps and failure analysis. I also compare ByteTrack against a simple IoU tracker, stress-test dropped-frame failures, profile CPU latency, and expose saved tracking outputs through a ROS 2 replay wrapper on `/tracking/objects` and `/tracking/status`.

@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M23 | complete | clickable README GIF and visual media polish |
+| M24 | complete | README and summary consistency cleanup |
 
 ## Milestone tracker
 
@@ -255,3 +255,11 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M23B | Add clickable hero GIF to README | complete |
 | M23C | Add visual artifacts section | complete |
 | M23D | Update artifact checker and tracker | complete |
+
+## M24 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M24A | Audit reviewer consistency issues | complete |
+| M24B | Fix README and final summary stale wording | complete |
+| M24C | Run consistency checks and update tracker | complete |

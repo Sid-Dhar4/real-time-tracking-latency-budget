@@ -10,8 +10,8 @@ This repository demonstrates a reproducible robotics perception benchmark for tr
 
 | Result area | Evidence |
 | ----------- | -------- |
-| Multi-sequence KITTI benchmark | sequences `0000`–`0005` |
-| Native TrackEval KITTI metrics | HOTA `49.412`, MOTA `52.312`, IDF1 `68.385` for ByteTrack |
+| Six-sequence TrackEval benchmark | HOTA `46.634`, MOTA `50.354`, IDF1 `61.903` on sequences `0000`–`0005` |
+| Two-sequence TrackEval baseline | HOTA `49.412`, MOTA `52.312`, IDF1 `68.385` on sequences `0000`–`0001` |
 | Tracker comparison | ByteTrack IDF1 `68.385` vs simple IoU tracker IDF1 `58.949` |
 | Robustness stress test | HOTA drops from `49.412` to `25.852` when every 2nd frame is removed |
 | Latency analysis | warmup-aware CPU p95 tracker latency around `16 ms` |
@@ -90,12 +90,12 @@ MVP:
 - YOLOv8n detector
 - ByteTrack tracker
 
-Extensions after MVP:
+Implemented and future extensions after MVP:
 
 - OC-SORT
 - second detector
 - CPU/GPU or ONNX comparison
-- ROS 2 visualization
+- ROS 2 replay wrapper (complete); typed messages/debug image are future work
 - optional C++ association module
 
 ## Pipeline
@@ -117,9 +117,9 @@ Confidence threshold sweep on KITTI sequence 0000, class Car:
 
 Increasing detector confidence from 0.25 to 0.65 reduced false positives from 357 to 121 and ID switches from 11 to 2, while improving local IDF1-like score from 0.310 to 0.441. The tradeoff was lower recall: 0.613 to 0.444. Plot: results/plots/m5_confidence_sweep_latency_idf1.png
 
-## Multi-sequence benchmark
+## Local diagnostic benchmark on sequences 0000–0001
 
-The benchmark now includes two KITTI tracking sequences for class `Car`.
+This earlier local diagnostic table uses KITTI sequences `0000` and `0001` for class `Car`. The primary benchmark is the six-sequence native TrackEval section.
 
 | sequence | GT | predictions | TP | FP | FN | IDSW | precision | recall | MOTA-like | IDF1-like |
 | -------- | -- | ----------- | -- | -- | -- | ---- | --------- | ------ | --------- | --------- |
@@ -154,7 +154,7 @@ Artifacts:
 
 ## Reproduce
 
-Create environment: conda create -n tracking-latency python=3.11 -y; conda activate tracking-latency; python -m pip install -r environment/requirements.txt
+Create environment: conda create -n tracking-latency python=3.11 -y; conda activate tracking-latency; python -m pip install -r environment/requirements-dev.txt
 
 Core commands:
 
@@ -275,4 +275,4 @@ The detector uses pretrained YOLOv8n weights, not KITTI-specific training; GPU b
 
 ## Future work
 
-OC-SORT comparison, second detector, ONNX inference, ROS 2 visualization, C++ association module, nuScenes-mini, and real camera video.
+OC-SORT comparison, second detector, ONNX inference, ROS 2 typed messages/debug image, C++ association module, nuScenes-mini, and real camera video.
