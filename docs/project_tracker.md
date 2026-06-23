@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M27 | complete | ROS 2 debug image replay topic |
+| M29 | complete | v1.0.0 release notes and tag |
 
 ## Milestone tracker
 
@@ -290,3 +290,12 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M27B | Add debug image replay executable | complete |
 | M27C | Build and smoke-test `/tracking/debug_image` | complete |
 | M27D | Document debug image topic and update checks | complete |
+
+## M29 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M29A | Final release audit | complete |
+| M29B | Create release notes and update checks | complete |
+| M29C | Commit release notes | pending |
+| M29D | Tag `v1.0.0` | pending |
