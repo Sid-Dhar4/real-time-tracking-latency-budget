@@ -1,3 +1,25 @@
+## Key results
+
+This repository demonstrates a reproducible robotics perception benchmark for tracking-by-detection under latency and robustness constraints.
+
+| Result area | Evidence |
+| ----------- | -------- |
+| Multi-sequence KITTI benchmark | sequences `0000` and `0001` |
+| Native TrackEval KITTI metrics | HOTA `49.412`, MOTA `52.312`, IDF1 `68.385` for ByteTrack |
+| Tracker comparison | ByteTrack IDF1 `68.385` vs simple IoU tracker IDF1 `58.949` |
+| Robustness stress test | HOTA drops from `49.412` to `25.852` when every 2nd frame is removed |
+| Latency analysis | warmup-aware CPU p95 tracker latency around `16 ms` |
+| Visual demo | annotated KITTI sequence `0001` overlay video |
+| Failure analysis | worst-frame examples and ID-switch analysis |
+
+Core artifacts:
+
+- `reports/trackeval_results.md`
+- `reports/trackeval_stress_test.md`
+- `reports/tracker_comparison.md`
+- `reports/runtime_analysis.md`
+- `results/videos/m11_seq0001_demo_overlay.mp4`
+
 # Real-Time Object Tracking Under a Robotics Latency Budget
 
 ## Summary
