@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M9 | in progress | warmup-aware CPU latency summary |
+| M9 | complete | warmup-aware CPU latency summary |
 
 ## Milestone tracker
 
@@ -128,4 +128,7 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | ----- | ------- | ------ |
 | M9A | Create warmup-aware latency summary | complete |
 | M9B | Allow M9 evidence and update tracker | complete |
-| M9C | Commit M9 latency evidence | not started |
+| M9C | Commit M9 latency evidence | complete |
+
+| M9D | Rebuild latency report without tabulate | complete |
+| M9E | Commit fixed latency report and mark M9 complete | complete |
