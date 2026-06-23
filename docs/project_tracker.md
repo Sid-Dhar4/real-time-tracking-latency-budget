@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M19 | complete | GitHub Actions CI and artifact checks |
+| M20 | complete | stronger unit tests for tracker logic and benchmark artifacts |
 
 ## Milestone tracker
 
@@ -217,3 +217,11 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M19A | Add artifact and stale-claim checker | complete |
 | M19B | Add GitHub Actions test workflow | complete |
 | M19C | Document CI and update tracker | complete |
+
+## M20 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M20A | Add simple IoU tracker unit tests | complete |
+| M20B | Add benchmark artifact and metric sanity tests | complete |
+| M20C | Document stronger tests and update tracker | complete |

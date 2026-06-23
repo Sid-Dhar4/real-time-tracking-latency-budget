@@ -32,7 +32,7 @@ Robot perception systems must trade off accuracy and latency. A tracker that is 
 
 ## Reproducibility checks
 
-This repository includes local tests and CI checks:
+This repository includes local tests and CI checks for schemas, KITTI label sanity, IoU tracker behavior, benchmark artifacts, metric regressions, and stale README claims:
 
 ```bash
 bash scripts/run_tests.sh
