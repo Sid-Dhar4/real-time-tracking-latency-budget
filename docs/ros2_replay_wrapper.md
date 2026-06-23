@@ -2,7 +2,7 @@
 
 This package provides a lightweight ROS 2 wrapper around the saved KITTI tracking outputs.
 
-It replays tracked objects from CSV and publishes JSON messages on ROS 2 topics.
+It replays saved KITTI tracking outputs from CSV and publishes JSON compatibility topics, typed tracking outputs, diagnostics, and annotated debug images on ROS 2 topics.
 
 ## Package
 
@@ -60,8 +60,8 @@ ros2 topic echo /tracking/objects --once
 
 ## Smoke-test result
 
-The wrapper was built with `colcon`, discovered by `ros2 pkg executables`, run through `ros2 run`, and verified to publish `/tracking/objects` and `/tracking/status`.
+The wrapper was built with `colcon`, discovered by `ros2 pkg executables`, run through `ros2 run`, and verified to publish `/tracking/objects`, `/tracking/status`, `/tracking/detections_2d`, `/tracking/diagnostics`, and `/tracking/debug_image`.
 
 ## Design note
 
-The wrapper now publishes typed `vision_msgs/Detection2DArray` and `diagnostic_msgs/DiagnosticArray` topics in addition to JSON compatibility topics. Image publishing remains a future extension so the benchmark pipeline can stay cleanly separated from ROS image transport and visualization dependencies.
+The wrapper publishes JSON compatibility topics, typed `vision_msgs/Detection2DArray` tracking outputs, typed `diagnostic_msgs/DiagnosticArray` diagnostics, and a separate `/tracking/debug_image` stream as `sensor_msgs/Image`. The tracking, diagnostics, latency probe, and debug-image paths are kept as separate components so each part can be tested independently.
