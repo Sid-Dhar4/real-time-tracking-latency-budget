@@ -84,3 +84,10 @@ Thumbs.db
 !results/trackeval_stress/
 !results/trackeval_stress/*.txt
 !reports/trackeval_stress_test.md
+!results/tracks/yolov8n_iou_seq0000_tracks.csv
+!results/tracks/yolov8n_iou_seq0001_tracks.csv
+!results/tables/m15_tracker_comparison.csv
+!results/plots/m15_tracker_comparison_metrics.png
+!results/trackeval_comparison/
+!results/trackeval_comparison/*.txt
+!reports/tracker_comparison.md

@@ -149,6 +149,25 @@ Artifacts:
 
 This demonstrates sensitivity to intermittent detector/tracker output under simulated dropped-frame perception failures.
 
+## Tracker comparison baseline
+
+A simple IoU tracker baseline was added and compared against ByteTrack using the same YOLOv8n detections and native TrackEval KITTI evaluation.
+
+Combined TrackEval results:
+
+| tracker | HOTA | MOTA | IDF1 | IDSW | FP | FN | IDs |
+| ------- | ---- | ---- | ---- | ---- | -- | -- | --- |
+| ByteTrack | 49.412 | 52.312 | 68.385 | 42 | 296 | 848 | 135 |
+| Simple IoU tracker | 48.814 | 45.879 | 58.949 | 197 | 705 | 444 | 436 |
+
+The IoU tracker keeps more detections and achieves higher recall, but creates far more ID switches and fragmented identities. ByteTrack is stronger for identity consistency and overall tracking quality.
+
+Artifacts:
+
+- `reports/tracker_comparison.md`
+- `results/tables/m15_tracker_comparison.csv`
+- `results/plots/m15_tracker_comparison_metrics.png`
+
 ## Runtime analysis
 
 Warmup-aware CPU latency plots are included:

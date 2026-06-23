@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M14 | complete | dropped-frame TrackEval robustness stress test |
+| M15 | complete | ByteTrack vs simple IoU tracker comparison |
 
 ## Milestone tracker
 
@@ -183,3 +183,14 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M14C | Run TrackEval on stress variants | complete |
 | M14D | Summarize stress-test results | complete |
 | M14E | Document and commit stress-test evidence | complete |
+
+## M15 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M15A | Add simple IoU tracker baseline | complete |
+| M15B | Run IoU tracker on KITTI sequences | complete |
+| M15C | Export IoU tracker to TrackEval format | complete |
+| M15D | Run TrackEval tracker comparison | complete |
+| M15E | Summarize tracker comparison | complete |
+| M15F | Commit tracker comparison evidence | in progress |
