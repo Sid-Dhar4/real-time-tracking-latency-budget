@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M11 | complete | annotated tracking demo video |
+| M12 | in progress | latency histograms and runtime plots |
 
 ## Milestone tracker
 
@@ -153,3 +153,12 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M11B | Generate annotated seq0001 demo video | complete |
 | M11C | Add demo notes and allow demo artifacts | complete |
 | M11D | Commit and push demo video artifacts | complete |
+
+## M12 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M12A | Add latency plotting script | complete |
+| M12B | Generate latency plots and runtime report | complete |
+| M12C | Allow M12 plots and update tracker | complete |
+| M12D | Commit and push latency plots | not started |

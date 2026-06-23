@@ -71,3 +71,6 @@ Thumbs.db
 !reports/latency_tradeoff_report.md
 !results/videos/m11_seq0001_demo_overlay.mp4
 !results/plots/m11_seq0001_demo_frame.jpg
+!results/plots/m12_latency_histogram.png
+!results/plots/m12_latency_summary_bar.png
+!reports/runtime_analysis.md
