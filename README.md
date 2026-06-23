@@ -56,7 +56,17 @@ The benchmark now includes two KITTI tracking sequences for class `Car`.
 | 0001 | 2681 | 2300 | 1756 | 544 | 925 | 49 | 0.763 | 0.655 | 0.434 | 0.647 |
 
 This matters because sequence `0001` is longer and has many more ground-truth car instances, making the project less dependent on one short clip.
-\n## Failure analysis
+\n## Demo video
+
+Annotated demo artifacts are included for KITTI sequence `0001`:
+
+- Video: `results/videos/m11_seq0001_demo_overlay.mp4`
+- Sample frame: `results/plots/m11_seq0001_demo_frame.jpg`
+- Notes: `reports/demo_notes.md`
+
+The overlay shows track boxes, track IDs, class names, confidence scores, frame number, and per-frame tracker latency.
+
+## Failure analysis
 
 Failure analysis was generated for confidence 0.65.
 

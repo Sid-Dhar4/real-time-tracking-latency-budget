@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M11 | in progress | annotated tracking demo video |
+| M11 | complete | annotated tracking demo video |
 
 ## Milestone tracker
 
@@ -152,4 +152,4 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M11A | Add annotated demo video script | complete |
 | M11B | Generate annotated seq0001 demo video | complete |
 | M11C | Add demo notes and allow demo artifacts | complete |
-| M11D | Commit and push demo video artifacts | not started |
+| M11D | Commit and push demo video artifacts | complete |
