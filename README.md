@@ -30,6 +30,17 @@ This project builds a reproducible tracking-by-detection benchmark using a light
 
 Robot perception systems must trade off accuracy and latency. A tracker that is accurate but too slow may be unusable, while a fast tracker with many ID switches can be unreliable for deployment.
 
+## Reproducibility checks
+
+This repository includes local tests and CI checks:
+
+```bash
+bash scripts/run_tests.sh
+python scripts/check_artifacts_exist.py
+```
+
+GitHub Actions runs these checks on push and pull request via `.github/workflows/tests.yml`.
+
 ## Environment setup
 
 Recommended setup:

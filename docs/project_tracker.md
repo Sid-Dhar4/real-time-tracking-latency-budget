@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M18 | complete | curated dependency files and environment docs |
+| M19 | complete | GitHub Actions CI and artifact checks |
 
 ## Milestone tracker
 
@@ -209,3 +209,11 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M18A | Split bloated requirements into minimal/dev/full-lock files | complete |
 | M18B | Verify imports, scripts, and tests after dependency cleanup | complete |
 | M18C | Document curated environment and update tracker | complete |
+
+## M19 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M19A | Add artifact and stale-claim checker | complete |
+| M19B | Add GitHub Actions test workflow | complete |
+| M19C | Document CI and update tracker | complete |
