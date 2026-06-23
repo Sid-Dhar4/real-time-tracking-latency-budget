@@ -113,3 +113,7 @@ Thumbs.db
 !results/logs/m21_seq0004_tracker.txt
 !results/logs/m21_seq0005_detector.txt
 !results/logs/m21_seq0005_tracker.txt
+ros2/build/
+ros2/install/
+ros2/log/
+*.egg-info/

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ros2_tracking_latency</name>
+  <version>0.1.0</version>
+  <description>ROS 2 replay wrapper for the tracking latency benchmark.</description>
+  <maintainer email="sudheshnad49@gmail.com">Sud</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

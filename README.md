@@ -30,6 +30,12 @@ This project builds a reproducible tracking-by-detection benchmark using a light
 
 Robot perception systems must trade off accuracy and latency. A tracker that is accurate but too slow may be unusable, while a fast tracker with many ID switches can be unreliable for deployment.
 
+## ROS 2 replay wrapper
+
+A ROS 2 Jazzy wrapper replays saved KITTI tracking outputs and publishes JSON messages on `/tracking/objects` and `/tracking/status`.
+
+Documentation: `docs/ros2_replay_wrapper.md` and `ros2/ros2_tracking_latency`.
+
 ## Reproducibility checks
 
 This repository includes local tests and CI checks for schemas, KITTI label sanity, IoU tracker behavior, benchmark artifacts, metric regressions, and stale README claims:

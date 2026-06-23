@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M21 | complete | six-sequence KITTI TrackEval benchmark coverage |
+| M22 | complete | ROS 2 KITTI track replay wrapper |
 
 ## Milestone tracker
 
@@ -236,3 +236,13 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M21D | Run six-sequence native TrackEval evaluation | complete |
 | M21E | Summarize six-sequence benchmark artifacts | complete |
 | M21F | Document and commit six-sequence benchmark | in progress |
+
+## M22 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M22A | Verify ROS 2 Jazzy system Python environment | complete |
+| M22B | Add ROS 2 package skeleton | complete |
+| M22C | Add CSV-based KITTI track replay node | complete |
+| M22D | Build with colcon and smoke-test ROS topics | complete |
+| M22E | Document ROS 2 wrapper | complete |
