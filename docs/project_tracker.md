@@ -182,4 +182,4 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M14B | Generate stress-test tracker variants | complete |
 | M14C | Run TrackEval on stress variants | complete |
 | M14D | Summarize stress-test results | complete |
-| M14E | Document and commit stress-test evidence | in progress |
+| M14E | Document and commit stress-test evidence | complete |
