@@ -74,3 +74,7 @@ Thumbs.db
 !results/plots/m12_latency_histogram.png
 !results/plots/m12_latency_summary_bar.png
 !reports/runtime_analysis.md
+!results/trackeval/
+!results/trackeval/m13_car_summary.txt
+!results/trackeval/m13_car_detailed.csv
+!reports/trackeval_results.md

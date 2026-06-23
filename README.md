@@ -103,6 +103,31 @@ python scripts/make_failure_report.py
 
 Tests will cover dataset parsing, detection/tracking formats, latency parsing, and result schemas.
 
+## TrackEval KITTI metrics
+
+Native TrackEval KITTI 2D box evaluation was run for class `car` on KITTI tracking sequences `0000` and `0001`.
+
+Combined results:
+
+- HOTA: `49.412`
+- MOTA: `52.312`
+- IDF1: `68.385`
+
+Per-sequence highlights:
+
+| sequence | HOTA | MOTA | IDF1 |
+| -------- | ---- | ---- | ---- |
+| 0000 | 43.489 | 25.581 | 51.084 |
+| 0001 | 50.009 | 54.842 | 70.177 |
+
+Artifacts:
+
+- `reports/trackeval_results.md`
+- `results/trackeval/m13_car_summary.txt`
+- `results/trackeval/m13_car_detailed.csv`
+
+These are TrackEval metrics, not a public KITTI leaderboard submission.
+
 ## Runtime analysis
 
 Warmup-aware CPU latency plots are included:

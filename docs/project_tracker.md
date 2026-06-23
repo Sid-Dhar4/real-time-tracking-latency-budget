@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M12 | complete | latency histograms and runtime plots |
+| M13 | complete | native TrackEval KITTI HOTA/CLEAR/Identity metrics |
 
 ## Milestone tracker
 
@@ -162,3 +162,14 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M12B | Generate latency plots and runtime report | complete |
 | M12C | Allow M12 plots and update tracker | complete |
 | M12D | Commit and push latency plots | complete |
+
+## M13 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M13A | Clone TrackEval and inspect runner | complete |
+| M13B | Inspect TrackEval data layout | complete |
+| M13C | Confirm native KITTI support and parser format | complete |
+| M13D | Export KITTI TrackEval native-format files | complete |
+| M13E | Run TrackEval KITTI car evaluation | complete |
+| M13F | Capture and commit TrackEval artifacts | complete |
