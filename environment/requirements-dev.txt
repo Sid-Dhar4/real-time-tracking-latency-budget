@@ -1,0 +1,6 @@
+# Development/test dependencies.
+# Install with:
+#   python -m pip install -r environment/requirements-dev.txt
+
+-r requirements-minimal.txt
+pytest

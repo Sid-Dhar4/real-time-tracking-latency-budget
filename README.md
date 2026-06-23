@@ -30,6 +30,22 @@ This project builds a reproducible tracking-by-detection benchmark using a light
 
 Robot perception systems must trade off accuracy and latency. A tracker that is accurate but too slow may be unusable, while a fast tracker with many ID switches can be unreliable for deployment.
 
+## Environment setup
+
+Recommended setup:
+
+```bash
+conda create -n tracking-latency python=3.11 -y
+conda activate tracking-latency
+python -m pip install -r environment/requirements-dev.txt
+```
+
+Environment files:
+
+- `environment/requirements-minimal.txt`: runtime dependencies for benchmark scripts.
+- `environment/requirements-dev.txt`: runtime dependencies plus test tooling.
+- `environment/environment-lock-full.txt`: archived local full freeze, not the recommended install path.
+
 ## Dataset
 
 KITTI tracking training split with a local validation subset only. No public leaderboard submission.

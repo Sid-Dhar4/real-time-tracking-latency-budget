@@ -1,0 +1,17 @@
+name: tracking-latency
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - numpy
+      - pandas
+      - scipy
+      - matplotlib
+      - opencv-python
+      - pyyaml
+      - tqdm
+      - ultralytics
+      - lap
+      - pytest

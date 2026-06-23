@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M16 | complete | final README key results and project summary |
+| M18 | complete | curated dependency files and environment docs |
 
 ## Milestone tracker
 
@@ -201,3 +201,11 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | ----- | ------- | ------ |
 | M16A | Add README key-results section and final project summary | complete |
 | M16B | Commit final README/project summary polish | complete |
+
+## M18 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M18A | Split bloated requirements into minimal/dev/full-lock files | complete |
+| M18B | Verify imports, scripts, and tests after dependency cleanup | complete |
+| M18C | Document curated environment and update tracker | complete |

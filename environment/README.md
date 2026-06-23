@@ -1,21 +1,21 @@
 # Environment
 
-Primary environment for the MVP:
+This project uses a small curated environment for the benchmark code and tests.
 
-- Conda environment name: tracking-latency
-- Python: 3.11
-- Detector smoke test currently uses CPU because NVIDIA driver is not working through nvidia-smi.
+## Recommended setup
 
-Create:
-
+```bash
 conda create -n tracking-latency python=3.11 -y
 conda activate tracking-latency
+python -m pip install -r environment/requirements-dev.txt
+```
 
-Install:
+## Files
 
-python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
-python -m pip install ultralytics opencv-python pandas matplotlib pyyaml tqdm pytest
+- `requirements-minimal.txt`: minimal runtime dependencies for detector/tracker/evaluation scripts.
+- `requirements-dev.txt`: minimal dependencies plus test tooling.
+- `requirements.txt`: alias of the minimal runtime requirements for common `pip install -r` usage.
+- `environment.yml`: conda environment file with Python 3.11 and benchmark dependencies.
+- `environment-lock-full.txt`: archived full local freeze for reference only.
 
-Freeze:
-
-python -m pip freeze > environment/requirements.txt
+The full lock file is intentionally not the recommended install path because it includes machine-specific ROS/Gazebo packages unrelated to this tracking benchmark.
