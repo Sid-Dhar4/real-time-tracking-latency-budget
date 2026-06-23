@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M13 | complete | native TrackEval KITTI HOTA/CLEAR/Identity metrics |
+| M14 | complete | dropped-frame TrackEval robustness stress test |
 
 ## Milestone tracker
 
@@ -173,3 +173,13 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M13D | Export KITTI TrackEval native-format files | complete |
 | M13E | Run TrackEval KITTI car evaluation | complete |
 | M13F | Capture and commit TrackEval artifacts | complete |
+
+## M14 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M14A | Add dropped-frame stress exporter | complete |
+| M14B | Generate stress-test tracker variants | complete |
+| M14C | Run TrackEval on stress variants | complete |
+| M14D | Summarize stress-test results | complete |
+| M14E | Document and commit stress-test evidence | in progress |

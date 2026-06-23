@@ -128,6 +128,27 @@ Artifacts:
 
 These are TrackEval metrics, not a public KITTI leaderboard submission.
 
+## Dropped-frame robustness stress test
+
+A TrackEval stress test was added by removing tracker outputs from every Nth frame before evaluation.
+
+Combined TrackEval results:
+
+| variant | HOTA | MOTA | IDF1 |
+| ------- | ---- | ---- | ---- |
+| baseline | 49.412 | 52.312 | 68.385 |
+| drop every 5th frame | 39.974 | 41.496 | 59.737 |
+| drop every 3rd frame | 33.765 | 34.700 | 53.454 |
+| drop every 2nd frame | 25.852 | 25.613 | 43.846 |
+
+Artifacts:
+
+- `reports/trackeval_stress_test.md`
+- `results/tables/m14_trackeval_stress_summary.csv`
+- `results/plots/m14_trackeval_stress_metrics.png`
+
+This demonstrates sensitivity to intermittent detector/tracker output under simulated dropped-frame perception failures.
+
 ## Runtime analysis
 
 Warmup-aware CPU latency plots are included:

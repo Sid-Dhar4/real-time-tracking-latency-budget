@@ -78,3 +78,9 @@ Thumbs.db
 !results/trackeval/m13_car_summary.txt
 !results/trackeval/m13_car_detailed.csv
 !reports/trackeval_results.md
+!results/tables/m14_stress_export_summary.csv
+!results/tables/m14_trackeval_stress_summary.csv
+!results/plots/m14_trackeval_stress_metrics.png
+!results/trackeval_stress/
+!results/trackeval_stress/*.txt
+!reports/trackeval_stress_test.md

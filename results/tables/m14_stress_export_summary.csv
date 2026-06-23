@@ -1,0 +1,9 @@
+variant,sequence,drop_every_n,original_rows,kept_rows,written_rows
+yolov8n_bytetrack,0000,none,807,807,506
+yolov8n_bytetrack,0001,none,2514,2514,2300
+yolov8n_bytetrack_drop_every_5,0000,5,807,632,401
+yolov8n_bytetrack_drop_every_5,0001,5,2514,2006,1836
+yolov8n_bytetrack_drop_every_3,0000,3,807,530,333
+yolov8n_bytetrack_drop_every_3,0001,3,2514,1664,1521
+yolov8n_bytetrack_drop_every_2,0000,2,807,393,248
+yolov8n_bytetrack_drop_every_2,0001,2,2514,1251,1143

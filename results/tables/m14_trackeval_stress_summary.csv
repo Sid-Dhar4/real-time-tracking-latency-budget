@@ -1,0 +1,5 @@
+variant,tracker,HOTA,MOTA,IDF1,DetRe,DetPr,CLR_Re,CLR_Pr,IDSW,CLR_FN,CLR_FP,Dets
+baseline,yolov8n_bytetrack,49.412,52.312,68.385,51.002,65.551,65.903,84.703,42,848,296,1935
+drop_every_5,yolov8n_bytetrack_drop_every_5,39.974,41.496,59.737,40.656,65.486,52.634,84.78,42,1178,235,1544
+drop_every_3,yolov8n_bytetrack_drop_every_3,33.765,34.7,53.454,33.852,65.928,43.788,85.278,38,1398,188,1277
+drop_every_2,yolov8n_bytetrack_drop_every_2,25.852,25.613,43.846,25.567,65.822,33.012,84.99,39,1666,145,966
