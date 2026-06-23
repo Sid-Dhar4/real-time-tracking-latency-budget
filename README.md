@@ -56,7 +56,7 @@ The benchmark now includes two KITTI tracking sequences for class `Car`.
 | 0001 | 2681 | 2300 | 1756 | 544 | 925 | 49 | 0.763 | 0.655 | 0.434 | 0.647 |
 
 This matters because sequence `0001` is longer and has many more ground-truth car instances, making the project less dependent on one short clip.
-\n## Demo video
+## Demo video
 
 Annotated demo artifacts are included for KITTI sequence `0001`:
 
