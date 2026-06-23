@@ -1,3 +1,5 @@
+# Real-Time Object Tracking Under a Robotics Latency Budget
+
 ## Key results
 
 This repository demonstrates a reproducible robotics perception benchmark for tracking-by-detection under latency and robustness constraints.
@@ -19,8 +21,6 @@ Core artifacts:
 - `reports/tracker_comparison.md`
 - `reports/runtime_analysis.md`
 - `results/videos/m11_seq0001_demo_overlay.mp4`
-
-# Real-Time Object Tracking Under a Robotics Latency Budget
 
 ## Summary
 
@@ -123,7 +123,7 @@ python scripts/make_failure_report.py
 
 ## Tests
 
-Tests will cover dataset parsing, detection/tracking formats, latency parsing, and result schemas.
+Tests cover result schemas, tracked benchmark artifacts, and KITTI label-format sanity checks via `scripts/run_tests.sh`.
 
 ## TrackEval KITTI metrics
 
@@ -202,7 +202,7 @@ The first 5 frames are excluded as warmup. These are CPU-only measurements becau
 
 ## Limitations
 
-Initial MVP uses pretrained detection and a small local KITTI validation split.
+The detector uses pretrained YOLOv8n weights, not KITTI-specific training; GPU benchmarking is future work after NVIDIA driver fix.
 
 ## Future work
 
