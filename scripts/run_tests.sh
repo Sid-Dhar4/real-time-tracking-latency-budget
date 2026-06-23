@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Disable external pytest plugin autoload so ROS 2 system pytest plugins do not leak into this Conda environment.
+# Disable external pytest plugins from ROS/other system installs so tests stay repo-local.
 export PYTEST_DISABLE_PLUGIN_AUTOLOAD=1
 
-python -m pytest -q tests/test_result_schema.py tests/test_kitti_format.py
+python -m pytest -q tests
