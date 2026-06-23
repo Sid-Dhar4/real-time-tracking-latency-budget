@@ -297,5 +297,5 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | ----- | ------- | ------ |
 | M29A | Final release audit | complete |
 | M29B | Create release notes and update checks | complete |
-| M29C | Commit release notes | pending |
-| M29D | Tag `v1.0.0` | pending |
+| M29C | Commit release notes | complete |
+| M29D | Tag `v1.0.0` | complete |

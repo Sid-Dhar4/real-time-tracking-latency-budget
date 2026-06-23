@@ -39,4 +39,4 @@ This release freezes the project as a polished robotics perception benchmark and
 
 ## Release commit
 
-This release is intended to be tagged as `v1.0.0` after tests and artifact checks pass.
+This release is tagged as `v1.0.0` after tests and artifact checks passed.
