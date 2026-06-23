@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M22 | complete | ROS 2 KITTI track replay wrapper |
+| M23 | complete | clickable README GIF and visual media polish |
 
 ## Milestone tracker
 
@@ -246,3 +246,12 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M22C | Add CSV-based KITTI track replay node | complete |
 | M22D | Build with colcon and smoke-test ROS topics | complete |
 | M22E | Document ROS 2 wrapper | complete |
+
+## M23 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M23A | Create README GIF, poster, and MP4 media assets | complete |
+| M23B | Add clickable hero GIF to README | complete |
+| M23C | Add visual artifacts section | complete |
+| M23D | Update artifact checker and tracker | complete |

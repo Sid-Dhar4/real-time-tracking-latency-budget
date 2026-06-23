@@ -1,5 +1,9 @@
 # Real-Time Object Tracking Under a Robotics Latency Budget
 
+[![Tracking latency demo](media/tracking_latency_teaser.gif)](media/tracking_latency_demo.mp4)
+
+Click the animation to open the full annotated demo video.
+
 ## Key results
 
 This repository demonstrates a reproducible robotics perception benchmark for tracking-by-detection under latency and robustness constraints.
@@ -21,6 +25,18 @@ Core artifacts:
 - `reports/tracker_comparison.md`
 - `reports/runtime_analysis.md`
 - `results/videos/m11_seq0001_demo_overlay.mp4`
+
+## Visual artifacts
+
+| Artifact | Path |
+| -------- | ---- |
+| Clickable README teaser GIF | `media/tracking_latency_teaser.gif` |
+| Full annotated demo video | `media/tracking_latency_demo.mp4` |
+| Demo poster frame | `media/tracking_latency_poster.jpg` |
+| Latency distribution plot | `results/plots/m12_latency_histogram.png` |
+| Dropped-frame stress plot | `results/plots/m14_trackeval_stress_metrics.png` |
+| Tracker comparison plot | `results/plots/m15_tracker_comparison_metrics.png` |
+| Six-sequence TrackEval plot | `results/plots/m21_trackeval_6seq_metrics.png` |
 
 ## Summary
 
