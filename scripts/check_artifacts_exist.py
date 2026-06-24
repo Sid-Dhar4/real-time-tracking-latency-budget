@@ -40,6 +40,8 @@ REQUIRED_FILES = [
     "reports/track_risk_validation.md",
     "results/tables/m34_risk_bucket_summary.csv",
     "results/plots/m34_risk_bucket_summary.png",
+    "reports/runtime_environment_audit.md",
+    "results/tables/m35_runtime_environment_audit.csv",
 ]
 
 FORBIDDEN_README_PHRASES = [

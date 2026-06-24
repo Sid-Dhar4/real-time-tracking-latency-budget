@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M34 | complete | track risk validation report |
+| M35 | complete | runtime environment and GPU limitation audit |
 
 ## Milestone tracker
 
@@ -326,3 +326,10 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | ----- | ------- | ------ |
 | M34A | Audit risk-score buckets | complete |
 | M34B | Generate bucket summary, plot, report, and docs | complete |
+
+## M35 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M35A | Audit NVIDIA driver, PyTorch CUDA, and Ultralytics | complete |
+| M35B | Document runtime environment and GPU benchmark limitation | complete |

@@ -25,6 +25,7 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 - ROS 2 debug image replay topic for annotated KITTI tracking frames
 - Track reliability risk diagnostics for unstable tracks
 - Risk-score validation showing high/medium risk buckets are shorter-lived and lower-confidence
+- Runtime environment audit documenting CPU benchmark support and current GPU limitation
 
 ## Strongest measured results
 
