@@ -23,6 +23,7 @@ This repository demonstrates a reproducible robotics perception benchmark for tr
 | Failure analysis | worst-frame examples and ID-switch analysis |
 | ROS 2 diagnostics latency probe | `/tracking/diagnostics` receive p95 `0.608 ms`; internal publish p95 `0.156 ms` at 10 FPS replay |
 | ROS 2 debug image topic | publishes annotated KITTI frames on `/tracking/debug_image` as `sensor_msgs/Image` |
+| Track reliability risk diagnostics | deterministic risk ranking for low-confidence, short-lived, border-adjacent, or jumpy tracks |
 
 Core artifacts:
 
@@ -30,6 +31,7 @@ Core artifacts:
 - `reports/trackeval_stress_test.md`
 - `reports/tracker_comparison.md`
 - `reports/runtime_analysis.md`
+- `reports/track_reliability_risk.md`
 - `results/videos/m11_seq0001_demo_overlay.mp4`
 
 ## Visual artifacts

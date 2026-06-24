@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M32 | complete | ROS 2 helper smoke checks |
+| M33 | complete | track reliability risk diagnostics |
 
 ## Milestone tracker
 
@@ -310,3 +310,12 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M32D | Commit smoke script | complete |
 | M32E | Verify GitHub Actions | complete |
 | M32F | Document smoke check and artifact requirement | complete |
+
+## M33 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M33A | Audit track CSVs for risk scoring | complete |
+| M33B | Add deterministic track risk scoring script | complete |
+| M33C | Add risk tests and report | complete |
+| M33D | Update docs, artifact checks, and commit | complete |

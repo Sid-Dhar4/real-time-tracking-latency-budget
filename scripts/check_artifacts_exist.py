@@ -33,6 +33,10 @@ REQUIRED_FILES = [
     "ros2/ros2_tracking_latency/ros2_tracking_latency/kitti_debug_image_replay_node.py",
     "docs/release_notes_v1.0.0.md",
     "scripts/check_ros2_message_helpers.py",
+    "scripts/compute_track_risk.py",
+    "reports/track_reliability_risk.md",
+    "results/tables/m33_track_risk_summary.csv",
+    "results/tables/m33_top_risky_tracks.csv",
 ]
 
 FORBIDDEN_README_PHRASES = [

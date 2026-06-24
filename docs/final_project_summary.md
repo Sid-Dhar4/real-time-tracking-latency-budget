@@ -23,6 +23,7 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 - Tests for schema and dataset sanity
 - ROS 2 diagnostics latency probe for typed replay topics
 - ROS 2 debug image replay topic for annotated KITTI tracking frames
+- Track reliability risk diagnostics for unstable tracks
 
 ## Strongest measured results
 
@@ -33,6 +34,7 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 - Warmup-aware CPU tracker p95 latency is approximately `16 ms` on both evaluated sequences
 - ROS 2 diagnostics latency probe: receive p95 `0.608 ms`, internal publish p95 `0.156 ms` at 10 FPS replay
 - ROS 2 debug image topic publishes annotated `sensor_msgs/Image` frames with track boxes and IDs
+- Track reliability risk diagnostics rank unstable tracks using confidence, box size, border proximity, motion jumps, and track length
 
 ## Honest caveats
 
