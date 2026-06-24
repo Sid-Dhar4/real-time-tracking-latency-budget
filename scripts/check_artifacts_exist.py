@@ -32,6 +32,7 @@ REQUIRED_FILES = [
     "media/tracking_debug_image_sample.jpg",
     "ros2/ros2_tracking_latency/ros2_tracking_latency/kitti_debug_image_replay_node.py",
     "docs/release_notes_v1.0.0.md",
+    "scripts/check_ros2_message_helpers.py",
 ]
 
 FORBIDDEN_README_PHRASES = [

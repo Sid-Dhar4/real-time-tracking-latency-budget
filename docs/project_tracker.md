@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M29 | complete | v1.0.0 release notes and tag |
+| M32 | complete | ROS 2 helper smoke checks |
 
 ## Milestone tracker
 
@@ -299,3 +299,14 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M29B | Create release notes and update checks | complete |
 | M29C | Commit release notes | complete |
 | M29D | Tag `v1.0.0` | complete |
+
+## M32 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M32A | Audit ROS helper functions | complete |
+| M32B | Attempt pytest ROS helper tests | replaced by smoke check |
+| M32C | Add system-Python ROS helper smoke script | complete |
+| M32D | Commit smoke script | complete |
+| M32E | Verify GitHub Actions | complete |
+| M32F | Document smoke check and artifact requirement | complete |

@@ -65,3 +65,16 @@ The wrapper was built with `colcon`, discovered by `ros2 pkg executables`, run t
 ## Design note
 
 The wrapper publishes JSON compatibility topics, typed `vision_msgs/Detection2DArray` tracking outputs, typed `diagnostic_msgs/DiagnosticArray` diagnostics, and a separate `/tracking/debug_image` stream as `sensor_msgs/Image`. The tracking, diagnostics, latency probe, and debug-image paths are kept as separate components so each part can be tested independently.
+
+## ROS helper smoke check
+
+The ROS 2 message helper conversion functions can be checked with system ROS Python:
+
+```bash
+conda deactivate 2>/dev/null || true
+source /opt/ros/jazzy/setup.bash
+python3 scripts/check_ros2_message_helpers.py
+```
+
+This validates `Detection2DArray`, `DiagnosticArray`, and debug-image helper behavior outside the Conda benchmark environment.
+
