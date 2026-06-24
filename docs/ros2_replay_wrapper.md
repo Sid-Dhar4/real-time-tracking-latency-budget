@@ -88,3 +88,27 @@ The track replay node also publishes deterministic reliability summaries:
 - `/tracking/safety_status`: compact downstream-facing safety status with `nominal`, `caution`, or `degraded`
 
 These topics are derived from `results/tables/m33_frame_risk_scores.csv` and are intended for monitoring and downstream planning experiments, not certified safety control.
+
+
+## Online image tracking node
+
+The ROS 2 package also includes an online callback-driven image tracking node.
+
+Run:
+
+    ros2 run ros2_tracking_latency image_iou_tracking --image-topic /camera/image_raw
+
+The node subscribes to sensor_msgs/msg/Image, performs deterministic bright-region detection plus IoU tracking, and publishes:
+
+- /tracking/status
+- /tracking/objects
+- /tracking/detections_2d
+- /tracking/diagnostics
+- /tracking/risk
+- /tracking/safety_status
+
+Smoke test:
+
+    bash scripts/check_ros2_online_image_tracking.sh
+
+This node is intended as an online ROS 2 architecture demonstration, not a replacement for the measured YOLOv8n + ByteTrack benchmark.

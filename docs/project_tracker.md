@@ -404,3 +404,11 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M45A | Audit C++ toolchain and repo build options | complete |
 | M45B | Add C++ tracking core, tests, benchmark, and check script | complete |
 | M45C | Add docs, artifact checks, CI, and commit | in progress |
+
+## M46 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M46A | Audit online ROS 2 detector/tracker feasibility | complete |
+| M46B | Add online image IoU tracking node and smoke test | complete |
+| M46C | Add docs, artifact checks, and commit | in progress |

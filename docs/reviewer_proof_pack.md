@@ -125,6 +125,17 @@ Evidence:
 - `scripts/check_cpp_tracking_core.sh`
 - `reports/cpp_tracking_core.md`
 
+
+### 9. Online ROS 2 image tracking node
+
+The project includes an online callback-driven ROS 2 node that subscribes to `/camera/image_raw` and publishes tracking, typed detection, diagnostic, risk, and safety-status topics.
+
+Evidence:
+
+- `ros2/ros2_tracking_latency/ros2_tracking_latency/image_iou_tracking_node.py`
+- `scripts/check_ros2_online_image_tracking.sh`
+- `reports/online_ros_image_tracking.md`
+
 ## Claim boundaries
 
 This repository reports local reproducible benchmark results, not a public KITTI leaderboard submission.

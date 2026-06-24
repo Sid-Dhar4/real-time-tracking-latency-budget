@@ -74,6 +74,9 @@ REQUIRED_FILES = [
     "cpp/tracking_core/benchmarks/benchmark_tracking_core.cpp",
     "scripts/check_cpp_tracking_core.sh",
     "reports/cpp_tracking_core.md",
+    "ros2/ros2_tracking_latency/ros2_tracking_latency/image_iou_tracking_node.py",
+    "scripts/check_ros2_online_image_tracking.sh",
+    "reports/online_ros_image_tracking.md",
 ]
 
 FORBIDDEN_README_PHRASES = [

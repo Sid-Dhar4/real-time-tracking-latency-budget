@@ -27,6 +27,7 @@ This repository demonstrates a reproducible robotics perception benchmark for tr
 | ROS 2 end-to-end topic smoke check | launches replay nodes and verifies `/tracking/status`, `/tracking/objects`, `/tracking/detections_2d`, `/tracking/diagnostics`, and `/tracking/debug_image` publish |
 | Robot-facing risk/safety topics | publishes `/tracking/risk` and `/tracking/safety_status` from per-frame track-risk diagnostics for downstream monitoring |
 | C++ tracking core | implements IoU association, track lifecycle, risk scoring, unit tests, and a microbenchmark for latency-critical tracking primitives |
+| Online ROS 2 image tracking node | subscribes to `/camera/image_raw`, performs deterministic online image tracking, and publishes objects, detections, diagnostics, risk, and safety status |
 | Track reliability risk diagnostics | deterministic risk ranking for low-confidence, short-lived, border-adjacent, or jumpy tracks |
 | Risk-score validation | high/medium risk buckets have shorter lifetimes and lower confidence than low-risk tracks |
 | Risk vs failure correlation | risk aligns with track fragmentation and frame-level FP/FN burden; ID switches remain a separate long-track failure mode |
@@ -77,6 +78,8 @@ A ROS 2 Jazzy wrapper replays saved KITTI tracking outputs and publishes JSON co
 Documentation: `docs/ros2_replay_wrapper.md` and `ros2/ros2_tracking_latency`.
 
 The replay wrapper also publishes robot-facing reliability topics, `/tracking/risk` and `/tracking/safety_status`, derived from per-frame track-risk diagnostics.
+
+The ROS 2 package also includes an online image-tracking node, `image_iou_tracking`, which subscribes to `/camera/image_raw` and publishes the same robot-facing tracking/risk/safety topics.
 
 ## Release
 
@@ -325,3 +328,5 @@ The detector uses pretrained YOLOv8n weights, not KITTI-specific training. Resul
 ## Future work
 
 OC-SORT or BoT-SORT comparison, ONNX/TensorRT export, C++ association/risk core, online ROS 2 detector/tracker node, nuScenes-mini, and real camera video.
+
+- `reports/online_ros_image_tracking.md`

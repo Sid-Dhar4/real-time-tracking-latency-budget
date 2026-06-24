@@ -20,6 +20,7 @@ setup(
         "console_scripts": [
             "kitti_track_replay = ros2_tracking_latency.kitti_track_replay_node:main",
             "kitti_debug_image_replay = ros2_tracking_latency.kitti_debug_image_replay_node:main",
+            'image_iou_tracking = ros2_tracking_latency.image_iou_tracking_node:main',
         ],
     },
 )

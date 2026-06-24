@@ -34,6 +34,7 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 - Risk-vs-failure correlation showing risk aligns with track fragmentation and frame-level FP/FN burden while ID switches remain a separate identity-consistency failure mode
 - Robot-facing ROS 2 risk/safety topics expose per-frame reliability summaries as `/tracking/risk` and `/tracking/safety_status`
 - C++ tracking core implements IoU association, track lifecycle, risk scoring, tests, and a microbenchmark
+- Online ROS 2 image tracking node subscribes to `/camera/image_raw` and publishes tracking, detection, risk, and safety-status topics
 
 ## Strongest measured results
 
