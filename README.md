@@ -1,7 +1,7 @@
 # Real-Time Object Tracking Under a Robotics Latency Budget
 
 [![tests](https://github.com/Sid-Dhar4/real-time-tracking-latency-budget/actions/workflows/tests.yml/badge.svg)](https://github.com/Sid-Dhar4/real-time-tracking-latency-budget/actions/workflows/tests.yml)
-[![release](https://img.shields.io/badge/release-v1.0.0-blue)](docs/release_notes_v1.0.0.md)
+[![release](https://img.shields.io/badge/release-v1.1.0-blue)](docs/release_notes_v1.1.0.md)
 [![ROS 2](https://img.shields.io/badge/ROS%202-Jazzy-blueviolet)](docs/ros2_replay_wrapper.md)
 
 [![Tracking latency demo](media/tracking_latency_teaser.gif)](media/tracking_latency_demo.mp4)
@@ -42,6 +42,7 @@ Core artifacts:
 - `reports/cpu_gpu_latency_benchmark.md`
 - `docs/reproduction_matrix.md`
 - `docs/reviewer_proof_pack.md`
+- `docs/release_notes_v1.1.0.md`
 - `results/videos/m11_seq0001_demo_overlay.mp4`
 
 ## Visual artifacts
@@ -73,11 +74,12 @@ Documentation: `docs/ros2_replay_wrapper.md` and `ros2/ros2_tracking_latency`.
 
 ## Release
 
-Current release: `v1.0.0`
+Current release: `v1.1.0`
 
-- Release notes: `docs/release_notes_v1.0.0.md`
-- Tag: `v1.0.0`
-- Scope: six-sequence KITTI TrackEval benchmark, dropped-frame stress tests, tracker comparison, latency analysis, ROS 2 typed topics, diagnostics latency probe, and debug image replay.
+- Release notes: `docs/release_notes_v1.1.0.md`
+- Tag: `v1.1.0`
+- Scope: v1.0.0 benchmark baseline plus track reliability diagnostics, risk validation, CPU/GPU latency benchmark, CUDA runtime audit, ROS 2 workspace smoke check, ROS 2 end-to-end topic smoke check, reproduction matrix, and reviewer proof pack.
+- Prior baseline: `docs/release_notes_v1.0.0.md`
 
 ## Reproducibility checks
 

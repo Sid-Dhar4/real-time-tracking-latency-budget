@@ -53,6 +53,7 @@ REQUIRED_FILES = [
     "scripts/check_ros2_end_to_end_topics.sh",
     "reports/ros2_end_to_end_topic_smoke_check.md",
     "docs/reviewer_proof_pack.md",
+    "docs/release_notes_v1.1.0.md",
 ]
 
 FORBIDDEN_README_PHRASES = [
