@@ -24,5 +24,9 @@ jobs:
       - name: Run unit tests
         run: bash scripts/run_tests.sh
 
+
+      - name: Run C++ tracking core checks
+        run: bash scripts/check_cpp_tracking_core.sh
+
       - name: Check required artifacts and stale claims
         run: python scripts/check_artifacts_exist.py

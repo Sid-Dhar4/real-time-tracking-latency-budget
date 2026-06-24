@@ -114,6 +114,17 @@ Evidence:
 - `scripts/check_artifacts_exist.py`
 - `docs/reproduction_matrix.md`
 
+
+### 8. C++ tracking core
+
+The project includes a compact C++ module for latency-critical tracking primitives: IoU association, track lifecycle state, risk scoring, tests, and a microbenchmark.
+
+Evidence:
+
+- `cpp/tracking_core/`
+- `scripts/check_cpp_tracking_core.sh`
+- `reports/cpp_tracking_core.md`
+
 ## Claim boundaries
 
 This repository reports local reproducible benchmark results, not a public KITTI leaderboard submission.

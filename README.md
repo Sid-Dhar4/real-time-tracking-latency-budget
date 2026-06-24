@@ -26,6 +26,7 @@ This repository demonstrates a reproducible robotics perception benchmark for tr
 | ROS 2 workspace smoke check | builds the ROS 2 Jazzy package in a temporary colcon workspace and verifies replay executables |
 | ROS 2 end-to-end topic smoke check | launches replay nodes and verifies `/tracking/status`, `/tracking/objects`, `/tracking/detections_2d`, `/tracking/diagnostics`, and `/tracking/debug_image` publish |
 | Robot-facing risk/safety topics | publishes `/tracking/risk` and `/tracking/safety_status` from per-frame track-risk diagnostics for downstream monitoring |
+| C++ tracking core | implements IoU association, track lifecycle, risk scoring, unit tests, and a microbenchmark for latency-critical tracking primitives |
 | Track reliability risk diagnostics | deterministic risk ranking for low-confidence, short-lived, border-adjacent, or jumpy tracks |
 | Risk-score validation | high/medium risk buckets have shorter lifetimes and lower confidence than low-risk tracks |
 | Risk vs failure correlation | risk aligns with track fragmentation and frame-level FP/FN burden; ID switches remain a separate long-track failure mode |

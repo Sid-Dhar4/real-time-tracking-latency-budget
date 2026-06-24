@@ -63,6 +63,17 @@ REQUIRED_FILES = [
     "results/tables/m43_frame_failure_diagnostics.csv",
     "results/plots/m43_risk_vs_failure_rate.png",
     "reports/robot_facing_risk_interface.md",
+    "cpp/tracking_core/CMakeLists.txt",
+    "cpp/tracking_core/include/tracking_core/iou.hpp",
+    "cpp/tracking_core/include/tracking_core/track_state.hpp",
+    "cpp/tracking_core/include/tracking_core/risk_score.hpp",
+    "cpp/tracking_core/src/iou.cpp",
+    "cpp/tracking_core/src/track_state.cpp",
+    "cpp/tracking_core/src/risk_score.cpp",
+    "cpp/tracking_core/tests/test_tracking_core.cpp",
+    "cpp/tracking_core/benchmarks/benchmark_tracking_core.cpp",
+    "scripts/check_cpp_tracking_core.sh",
+    "reports/cpp_tracking_core.md",
 ]
 
 FORBIDDEN_README_PHRASES = [

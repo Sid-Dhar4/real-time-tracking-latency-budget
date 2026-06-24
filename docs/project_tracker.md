@@ -396,3 +396,11 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M44A | Audit risk interface inputs and ROS node patch points | complete |
 | M44B | Add `/tracking/risk` and `/tracking/safety_status` topics | complete |
 | M44C | Add docs, checker updates, and commit | in progress |
+
+## M45 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M45A | Audit C++ toolchain and repo build options | complete |
+| M45B | Add C++ tracking core, tests, benchmark, and check script | complete |
+| M45C | Add docs, artifact checks, CI, and commit | in progress |

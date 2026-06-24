@@ -21,6 +21,7 @@ The goal is to make the project easy to audit quickly without reading every scri
 | ROS 2 workspace smoke check passes | `bash scripts/check_ros2_workspace.sh` | package builds in a temporary colcon workspace and replay executables are discoverable | `reports/ros2_workspace_smoke_check.md` |
 | ROS 2 end-to-end topics publish | `bash scripts/check_ros2_end_to_end_topics.sh` | replay nodes publish status, objects, typed detections, diagnostics, and debug image topics | `reports/ros2_end_to_end_topic_smoke_check.md` |
 | Robot-facing risk/safety topics publish | `bash scripts/check_ros2_end_to_end_topics.sh` | `/tracking/risk` and `/tracking/safety_status` publish with risk summary and safety state | `reports/robot_facing_risk_interface.md` |
+| C++ tracking core builds and tests | `bash scripts/check_cpp_tracking_core.sh` | CMake build passes, CTest passes, and tracking-core microbenchmark runs | `reports/cpp_tracking_core.md` |
 | ROS 2 diagnostic latency probe exists | inspect latency probe report | diagnostics receive p95 and internal publish p95 reported | `reports/ros2_latency_probe.md` |
 | Demo video exists | inspect visual artifacts | annotated KITTI tracking overlay video and teaser GIF exist | `media/tracking_latency_teaser.gif`, `media/tracking_latency_demo.mp4` |
 
@@ -75,3 +76,7 @@ Run ROS 2 end-to-end topic smoke check:
 Run risk-vs-failure correlation:
 
     python scripts/analyze_risk_failure_correlation.py
+
+Run C++ tracking core check:
+
+    bash scripts/check_cpp_tracking_core.sh
