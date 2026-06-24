@@ -42,6 +42,11 @@ REQUIRED_FILES = [
     "results/plots/m34_risk_bucket_summary.png",
     "reports/runtime_environment_audit.md",
     "results/tables/m35_runtime_environment_audit.csv",
+    "scripts/benchmark_cpu_gpu_latency.py",
+    "reports/cpu_gpu_latency_benchmark.md",
+    "results/tables/m36_cpu_gpu_latency_raw.csv",
+    "results/tables/m36_cpu_gpu_latency_summary.csv",
+    "results/plots/m36_cpu_gpu_latency_comparison.png",
 ]
 
 FORBIDDEN_README_PHRASES = [

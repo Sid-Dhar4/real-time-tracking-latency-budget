@@ -26,6 +26,7 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 - Track reliability risk diagnostics for unstable tracks
 - Risk-score validation showing high/medium risk buckets are shorter-lived and lower-confidence
 - Runtime environment audit documenting CPU benchmark support and CUDA-enabled PyTorch availability
+- CPU/GPU latency benchmark measuring YOLOv8n inference on RTX 5060 Laptop GPU
 
 ## Strongest measured results
 
@@ -38,6 +39,7 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 - ROS 2 debug image topic publishes annotated `sensor_msgs/Image` frames with track boxes and IDs
 - Track reliability risk diagnostics rank unstable tracks using confidence, box size, border proximity, motion jumps, and track length
 - Risk-score validation shows high-risk track lifetime `1.0` frame vs low-risk average `18.9` frames, with lower mean confidence
+- CPU/GPU benchmark measured 9.40 ms CPU mean latency vs 3.22 ms GPU mean latency, a 2.92x mean-latency speedup
 
 ## Honest caveats
 
