@@ -4,23 +4,32 @@ This report records the runtime environment used for the tracking latency benchm
 
 ## Result
 
-The current environment supports the CPU benchmark path, but not a GPU benchmark path.
+The current environment supports the CPU benchmark path and CUDA-enabled PyTorch execution.
 
 ## GPU status
 
-`nvidia-smi` is not able to communicate with the NVIDIA driver in this environment. PyTorch is installed as a CPU-only build and reports CUDA unavailable.
+`nvidia-smi` is available and the NVIDIA kernel driver is active.
 
-Therefore, this repository does **not** claim GPU latency numbers for this run.
+- GPU: `NVIDIA GeForce RTX 5060 Laptop GPU`
+- NVIDIA driver: `595.71.05`
+- GPU memory: `8151 MiB`
+- PyTorch: `2.11.0+cu128`
+- PyTorch CUDA runtime: `12.8`
+- CUDA available in PyTorch: `True`
+- CUDA tensor test: `ok (1024, 1024)`
 
-## Why this matters
+## Benchmark claim boundary
 
-A real robotics latency benchmark should separate measured results from unavailable hardware paths. Reporting GPU latency without a working NVIDIA driver and CUDA-enabled PyTorch would be misleading.
+This audit confirms that CUDA is available in the project environment. It does **not** by itself claim GPU latency numbers.
+
+GPU latency numbers should only be claimed after a controlled CPU-vs-GPU benchmark is run, saved, documented, and checked into the repository.
 
 ## Current decision
 
 - CPU latency benchmark: supported
-- GPU latency benchmark: not run
-- Future GPU benchmark requirement: working `nvidia-smi`, CUDA-enabled PyTorch, and a repeatable CPU-vs-GPU measurement script
+- CUDA PyTorch execution: supported
+- GPU latency benchmark: ready to measure next
+- GPU benchmark claim: not made yet
 
 ## Audit table
 

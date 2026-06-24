@@ -1,10 +1,14 @@
 component,value,status
 python,3.11.15,ok
 platform,Linux-6.17.0-35-generic-x86_64-with-glibc2.39,ok
-nvidia_smi,unavailable,Command '['nvidia-smi']' returned non-zero exit status 9.
-torch,2.12.0+cpu,ok
-torch_cuda_available,False,gpu benchmark disabled
-torch_cuda_version,None,none
-cuda_device_count,0,no CUDA device visible
-cuda_device_name,none,none
+nvidia_smi,available,ok
+nvidia_gpu_name,NVIDIA GeForce RTX 5060 Laptop GPU,ok
+nvidia_driver_version,595.71.05,ok
+nvidia_gpu_memory,8151 MiB,ok
+torch,2.11.0+cu128,ok
+torch_cuda_available,True,ok
+torch_cuda_version,12.8,ok
+cuda_device_count,1,ok
+cuda_device_name,NVIDIA GeForce RTX 5060 Laptop GPU,ok
+cuda_tensor_test,ok (1024; 1024),ok
 ultralytics,8.4.57,ok

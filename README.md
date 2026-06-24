@@ -25,7 +25,7 @@ This repository demonstrates a reproducible robotics perception benchmark for tr
 | ROS 2 debug image topic | publishes annotated KITTI frames on `/tracking/debug_image` as `sensor_msgs/Image` |
 | Track reliability risk diagnostics | deterministic risk ranking for low-confidence, short-lived, border-adjacent, or jumpy tracks |
 | Risk-score validation | high/medium risk buckets have shorter lifetimes and lower confidence than low-risk tracks |
-| Runtime environment audit | documents CPU-supported benchmark path and explains why GPU numbers are not claimed in the current environment |
+| Runtime environment audit | documents CPU/GPU runtime state; CUDA PyTorch is available but GPU latency numbers require a separate measured benchmark |
 
 Core artifacts:
 

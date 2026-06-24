@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M35 | complete | runtime environment and GPU limitation audit |
+| M35 | complete | runtime environment and CUDA PyTorch audit |
 
 ## Milestone tracker
 
@@ -332,4 +332,5 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | Block | Purpose | Status |
 | ----- | ------- | ------ |
 | M35A | Audit NVIDIA driver, PyTorch CUDA, and Ultralytics | complete |
-| M35B | Document runtime environment and GPU benchmark limitation | complete |
+| M35B | Document initial runtime environment and GPU benchmark limitation | complete |
+| M35C | Regenerate audit after CUDA PyTorch enablement | complete |
