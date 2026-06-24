@@ -304,18 +304,18 @@ Artifacts:
 
 ## Runtime analysis
 
-Warmup-aware CPU latency plots are included:
+Warmup-aware CPU tracker latency plots are included:
 
 - Histogram: `results/plots/m12_latency_histogram.png`
 - Summary bar plot: `results/plots/m12_latency_summary_bar.png`
 - Report: `reports/runtime_analysis.md`
 
-The first 5 frames are excluded as warmup. These are CPU-only measurements because NVIDIA driver support was not working through `nvidia-smi` during this project.
+The first 5 frames are excluded as warmup. Detector-only CPU/GPU latency is reported separately in `reports/cpu_gpu_latency_benchmark.md`.
 
 ## Limitations
 
-The detector uses pretrained YOLOv8n weights, not KITTI-specific training; GPU benchmarking is future work after NVIDIA driver fix.
+The detector uses pretrained YOLOv8n weights, not KITTI-specific training. Results are local reproducible evaluations on KITTI training sequences, not a public KITTI leaderboard submission. The ROS 2 package is currently a replay wrapper over saved tracking outputs, not an online detector/tracker node.
 
 ## Future work
 
-OC-SORT comparison, second detector, ONNX/GPU timing after driver support, C++ association module, nuScenes-mini, real camera video, and an optional live ROS 2 detector/tracker node.
+OC-SORT or BoT-SORT comparison, ONNX/TensorRT export, C++ association/risk core, online ROS 2 detector/tracker node, nuScenes-mini, and real camera video.
