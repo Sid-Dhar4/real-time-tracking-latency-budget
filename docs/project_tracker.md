@@ -379,4 +379,4 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M41A | Ruthless pre-release repo audit | complete |
 | M41B | Clean stale release wording and limitations | complete |
 | M41C | Add v1.1.0 release notes and README release update | complete |
-| M41D | Tag v1.1.0 release | pending |
+| M41D | Tag v1.1.0 release | complete |
