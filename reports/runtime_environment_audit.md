@@ -22,7 +22,7 @@ The current environment supports the CPU benchmark path and CUDA-enabled PyTorch
 
 This audit confirms that CUDA is available in the project environment. It does **not** by itself claim GPU latency numbers.
 
-GPU latency numbers should only be claimed after a controlled CPU-vs-GPU benchmark is run, saved, documented, and checked into the repository.
+GPU latency numbers are reported separately in `reports/cpu_gpu_latency_benchmark.md`, after a controlled CPU-vs-GPU benchmark was run, saved, documented, and checked into the repository.
 
 ## Current decision
 

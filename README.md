@@ -136,7 +136,7 @@ Implemented:
 Future optional extensions:
 
 - OC-SORT or second detector comparison
-- ONNX/GPU timing if driver support is available
+- ONNX/TensorRT export or an online ROS 2 detector node
 - C++ association module
 
 ## Pipeline

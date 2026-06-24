@@ -18,4 +18,4 @@ These are CPU-only measurements because NVIDIA driver support was not working th
 - This is not a GPU benchmark.
 - Latency is computed from saved CSV outputs, grouped by frame.
 - The first 5 frames are excluded as warmup.
-- Final deployment claims should use a dedicated benchmark script after GPU driver fix.
+- Detector-only CPU/GPU latency is reported separately in `reports/cpu_gpu_latency_benchmark.md`; full robot deployment latency remains outside this benchmark.

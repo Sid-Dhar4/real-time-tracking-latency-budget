@@ -12,7 +12,7 @@
 
 ## Do not claim yet
 
-- Official KITTI leaderboard result
+- Public KITTI test-server result
 - TrackEval HOTA
 - GPU real-time performance
 - Production-ready autonomous driving system
