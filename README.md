@@ -25,6 +25,7 @@ This repository demonstrates a reproducible robotics perception benchmark for tr
 | ROS 2 debug image topic | publishes annotated KITTI frames on `/tracking/debug_image` as `sensor_msgs/Image` |
 | ROS 2 workspace smoke check | builds the ROS 2 Jazzy package in a temporary colcon workspace and verifies replay executables |
 | ROS 2 end-to-end topic smoke check | launches replay nodes and verifies `/tracking/status`, `/tracking/objects`, `/tracking/detections_2d`, `/tracking/diagnostics`, and `/tracking/debug_image` publish |
+| Robot-facing risk/safety topics | publishes `/tracking/risk` and `/tracking/safety_status` from per-frame track-risk diagnostics for downstream monitoring |
 | Track reliability risk diagnostics | deterministic risk ranking for low-confidence, short-lived, border-adjacent, or jumpy tracks |
 | Risk-score validation | high/medium risk buckets have shorter lifetimes and lower confidence than low-risk tracks |
 | Risk vs failure correlation | risk aligns with track fragmentation and frame-level FP/FN burden; ID switches remain a separate long-track failure mode |
@@ -73,6 +74,8 @@ Robot perception systems must trade off accuracy and latency. A tracker that is 
 A ROS 2 Jazzy wrapper replays saved KITTI tracking outputs and publishes JSON compatibility topics, typed robotics-native tracking outputs, diagnostics, latency-probe support, and annotated debug images: `/tracking/objects`, `/tracking/status`, `/tracking/detections_2d`, `/tracking/diagnostics`, and `/tracking/debug_image`.
 
 Documentation: `docs/ros2_replay_wrapper.md` and `ros2/ros2_tracking_latency`.
+
+The replay wrapper also publishes robot-facing reliability topics, `/tracking/risk` and `/tracking/safety_status`, derived from per-frame track-risk diagnostics.
 
 ## Release
 

@@ -388,3 +388,11 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M43A | Audit inputs for risk-vs-failure correlation | complete |
 | M43B | Add and run risk-vs-failure correlation analysis | complete |
 | M43C | Add docs, artifact checks, and commit | in progress |
+
+## M44 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M44A | Audit risk interface inputs and ROS node patch points | complete |
+| M44B | Add `/tracking/risk` and `/tracking/safety_status` topics | complete |
+| M44C | Add docs, checker updates, and commit | in progress |

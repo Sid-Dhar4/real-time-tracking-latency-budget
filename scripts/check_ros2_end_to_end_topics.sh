@@ -70,12 +70,19 @@ DETECTIONS_PID=$!
 timeout 15s ros2 topic echo --once /tracking/diagnostics diagnostic_msgs/msg/DiagnosticArray --field header > "$TMP_ROOT/diagnostics_header.txt" &
 DIAGNOSTICS_PID=$!
 
+timeout 15s ros2 topic echo --once /tracking/risk std_msgs/msg/String > "$TMP_ROOT/risk.txt" &
+RISK_PID=$!
+
+timeout 15s ros2 topic echo --once /tracking/safety_status std_msgs/msg/String > "$TMP_ROOT/safety_status.txt" &
+SAFETY_PID=$!
+
 ros2 run ros2_tracking_latency kitti_track_replay \
   --tracks-csv "$TRACKS_CSV" \
   --sequence 0001 \
   --fps 5 \
   --max-frames 20 \
   --frame-id kitti_camera \
+  --risk-csv results/tables/m33_frame_risk_scores.csv \
   > "$TMP_ROOT/track_node.log" 2>&1 &
 TRACK_NODE_PID=$!
 
@@ -83,6 +90,8 @@ wait "$STATUS_PID"
 wait "$OBJECTS_PID"
 wait "$DETECTIONS_PID"
 wait "$DIAGNOSTICS_PID"
+wait "$RISK_PID"
+wait "$SAFETY_PID"
 
 wait "$TRACK_NODE_PID" || true
 
@@ -101,10 +110,20 @@ echo
 echo "diagnostics header sample:"
 cat "$TMP_ROOT/diagnostics_header.txt"
 
+echo
+echo "risk sample:"
+head -20 "$TMP_ROOT/risk.txt"
+
+echo
+echo "safety status sample:"
+head -20 "$TMP_ROOT/safety_status.txt"
+
 grep -q "sequence" "$TMP_ROOT/status.txt"
 grep -q "objects" "$TMP_ROOT/objects.txt"
 grep -q "frame_id" "$TMP_ROOT/detections_header.txt"
 grep -q "frame_id" "$TMP_ROOT/diagnostics_header.txt"
+grep -q "max_risk_score" "$TMP_ROOT/risk.txt"
+grep -q "safety_state" "$TMP_ROOT/safety_status.txt"
 
 echo
 echo "========== DEBUG IMAGE TOPIC CHECK =========="

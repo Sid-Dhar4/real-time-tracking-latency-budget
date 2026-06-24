@@ -101,22 +101,90 @@ def make_diagnostic_array(status_values, stamp):
     return msg
 
 
+def load_risk_csv(path):
+    risk_path = Path(path)
+    if not risk_path.exists():
+        return []
+
+    rows = []
+    with risk_path.open(newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            rows.append(row)
+    return rows
+
+
+def group_risk_by_frame(rows):
+    frames = {}
+    for row in rows:
+        frame = int(float(row["frame"]))
+        frames.setdefault(frame, []).append(row)
+    return frames
+
+
+def summarize_risk_rows(rows):
+    if not rows:
+        return {
+            "num_risk_rows": 0,
+            "max_risk_score": 0.0,
+            "mean_risk_score": 0.0,
+            "num_medium_risk_tracks": 0,
+            "num_high_risk_tracks": 0,
+            "num_medium_or_high_risk_tracks": 0,
+            "safety_state": "nominal",
+            "reason": "no active risk-scored tracks",
+        }
+
+    scores = [float(r.get("risk_score", 0.0)) for r in rows]
+    max_score = max(scores)
+    mean_score = sum(scores) / len(scores)
+    num_high = sum(score >= 0.65 for score in scores)
+    num_medium = sum(0.45 <= score < 0.65 for score in scores)
+    num_medium_high = num_medium + num_high
+
+    if num_high > 0:
+        safety_state = "degraded"
+        reason = "one or more high-risk tracks active"
+    elif num_medium_high > 0:
+        safety_state = "caution"
+        reason = "one or more medium-risk tracks active"
+    else:
+        safety_state = "nominal"
+        reason = "all active tracks below medium-risk threshold"
+
+    return {
+        "num_risk_rows": len(rows),
+        "max_risk_score": max_score,
+        "mean_risk_score": mean_score,
+        "num_medium_risk_tracks": int(num_medium),
+        "num_high_risk_tracks": int(num_high),
+        "num_medium_or_high_risk_tracks": int(num_medium_high),
+        "safety_state": safety_state,
+        "reason": reason,
+    }
+
+
 class KittiTrackReplayNode(Node):
-    def __init__(self, tracks_csv, sequence, fps, max_frames, frame_id):
+    def __init__(self, tracks_csv, sequence, fps, max_frames, frame_id, risk_csv):
         super().__init__("kitti_track_replay")
         self.tracks_csv = Path(tracks_csv)
         self.sequence = str(sequence).zfill(4)
         self.fps = float(fps)
         self.max_frames = int(max_frames)
         self.frame_id = str(frame_id)
+        self.risk_csv = Path(risk_csv)
 
         self.objects_pub = self.create_publisher(String, "/tracking/objects", 10)
         self.status_pub = self.create_publisher(String, "/tracking/status", 10)
         self.detections_pub = self.create_publisher(Detection2DArray, "/tracking/detections_2d", 10)
         self.diagnostics_pub = self.create_publisher(DiagnosticArray, "/tracking/diagnostics", 10)
+        self.risk_pub = self.create_publisher(String, "/tracking/risk", 10)
+        self.safety_pub = self.create_publisher(String, "/tracking/safety_status", 10)
 
         self.rows = load_tracks_csv(self.tracks_csv)
         self.frames_to_rows = group_tracks_by_frame(self.rows)
+        self.risk_rows = load_risk_csv(self.risk_csv)
+        self.risk_frames_to_rows = group_risk_by_frame(self.risk_rows)
         self.frames = sorted(self.frames_to_rows.keys())
         if self.max_frames > 0:
             self.frames = self.frames[: self.max_frames]
@@ -126,6 +194,7 @@ class KittiTrackReplayNode(Node):
         self.timer = self.create_timer(period, self.tick)
 
         self.get_logger().info("Loaded {} rows from {}".format(len(self.rows), self.tracks_csv))
+        self.get_logger().info("Loaded {} risk rows from {}".format(len(self.risk_rows), self.risk_csv))
         self.get_logger().info("Replaying {} frames for sequence {} at {} FPS".format(len(self.frames), self.sequence, self.fps))
 
     def tick(self):
@@ -157,6 +226,28 @@ class KittiTrackReplayNode(Node):
             "source_csv": str(self.tracks_csv),
         }
 
+        risk_rows = self.risk_frames_to_rows.get(frame, [])
+        risk_summary = summarize_risk_rows(risk_rows)
+
+        status["max_risk_score"] = risk_summary["max_risk_score"]
+        status["mean_risk_score"] = risk_summary["mean_risk_score"]
+        status["safety_state"] = risk_summary["safety_state"]
+
+        risk_payload = {
+            "sequence": self.sequence,
+            "frame": frame,
+            "source_csv": str(self.risk_csv),
+            **risk_summary,
+        }
+        safety_payload = {
+            "sequence": self.sequence,
+            "frame": frame,
+            "safety_state": risk_summary["safety_state"],
+            "reason": risk_summary["reason"],
+            "max_risk_score": risk_summary["max_risk_score"],
+            "num_medium_or_high_risk_tracks": risk_summary["num_medium_or_high_risk_tracks"],
+        }
+
         msg = String()
         msg.data = json.dumps(payload)
         self.objects_pub.publish(msg)
@@ -166,6 +257,14 @@ class KittiTrackReplayNode(Node):
         self.status_pub.publish(status_msg)
         self.detections_pub.publish(detections_msg)
         self.diagnostics_pub.publish(make_diagnostic_array(status, stamp))
+
+        risk_msg = String()
+        risk_msg.data = json.dumps(risk_payload)
+        self.risk_pub.publish(risk_msg)
+
+        safety_msg = String()
+        safety_msg.data = json.dumps(safety_payload)
+        self.safety_pub.publish(safety_msg)
 
         self.idx += 1
 
@@ -191,6 +290,7 @@ def main():
     parser.add_argument("--fps", type=float, default=10.0)
     parser.add_argument("--max-frames", type=int, default=50)
     parser.add_argument("--frame-id", default="kitti_camera")
+    parser.add_argument("--risk-csv", default="results/tables/m33_frame_risk_scores.csv")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
@@ -199,7 +299,7 @@ def main():
         return
 
     rclpy.init()
-    node = KittiTrackReplayNode(args.tracks_csv, args.sequence, args.fps, args.max_frames, args.frame_id)
+    node = KittiTrackReplayNode(args.tracks_csv, args.sequence, args.fps, args.max_frames, args.frame_id, args.risk_csv)
     rclpy.spin(node)
 
 

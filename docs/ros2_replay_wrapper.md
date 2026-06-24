@@ -78,3 +78,13 @@ python3 scripts/check_ros2_message_helpers.py
 
 This validates `Detection2DArray`, `DiagnosticArray`, and debug-image helper behavior outside the Conda benchmark environment.
 
+
+
+## Robot-facing risk topics
+
+The track replay node also publishes deterministic reliability summaries:
+
+- `/tracking/risk`: per-frame risk summary with max/mean risk, medium/high-risk counts, and safety state
+- `/tracking/safety_status`: compact downstream-facing safety status with `nominal`, `caution`, or `degraded`
+
+These topics are derived from `results/tables/m33_frame_risk_scores.csv` and are intended for monitoring and downstream planning experiments, not certified safety control.

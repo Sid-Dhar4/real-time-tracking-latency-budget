@@ -62,6 +62,7 @@ REQUIRED_FILES = [
     "results/tables/m43_track_failure_diagnostics.csv",
     "results/tables/m43_frame_failure_diagnostics.csv",
     "results/plots/m43_risk_vs_failure_rate.png",
+    "reports/robot_facing_risk_interface.md",
 ]
 
 FORBIDDEN_README_PHRASES = [

@@ -91,12 +91,15 @@ Verified topics:
 - `/tracking/detections_2d`
 - `/tracking/diagnostics`
 - `/tracking/debug_image`
+- `/tracking/risk`
+- `/tracking/safety_status`
 
 Evidence:
 
 - `docs/ros2_replay_wrapper.md`
 - `reports/ros2_workspace_smoke_check.md`
 - `reports/ros2_end_to_end_topic_smoke_check.md`
+- `reports/robot_facing_risk_interface.md`
 - `scripts/check_ros2_workspace.sh`
 - `scripts/check_ros2_end_to_end_topics.sh`
 

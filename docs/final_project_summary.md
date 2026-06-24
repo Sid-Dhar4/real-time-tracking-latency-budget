@@ -32,6 +32,7 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 - ROS 2 end-to-end topic smoke check verifies replay nodes publish status, objects, typed detections, diagnostics, and debug images
 - Reviewer proof pack summarizing strongest evidence, claim boundaries, and inspection order
 - Risk-vs-failure correlation showing risk aligns with track fragmentation and frame-level FP/FN burden while ID switches remain a separate identity-consistency failure mode
+- Robot-facing ROS 2 risk/safety topics expose per-frame reliability summaries as `/tracking/risk` and `/tracking/safety_status`
 
 ## Strongest measured results
 
