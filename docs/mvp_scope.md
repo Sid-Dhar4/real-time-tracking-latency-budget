@@ -29,7 +29,7 @@ A careful robotics computer vision benchmark.
 ## What this project is not
 
 It is not a generic YOLO demo.
-It is not a fake autonomous driving system.
+It is not a full autonomous-driving stack.
 It is not a leaderboard submission.
 It is not a training project.
 It is not a ROS 2 project yet.

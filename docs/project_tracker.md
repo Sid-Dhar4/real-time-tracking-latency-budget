@@ -77,7 +77,7 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 - Every runnable command block must have a START and END label.
 - Every milestone must produce an evidence artifact.
 - Every result must come from a script, saved CSV, log, plot, or generated report.
-- Do not add fake metrics.
+- Do not add unsupported metrics.
 - Do not over-scope before the MVP works.
 
 

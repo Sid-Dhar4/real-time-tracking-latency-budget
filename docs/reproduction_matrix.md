@@ -26,12 +26,12 @@ The goal is to make the project easy to audit quickly without reading every scri
 
 1. Read `docs/reviewer_proof_pack.md`.
 2. Read the README key-results table.
-2. Run the tests and artifact checker.
-3. Inspect `reports/cpu_gpu_latency_benchmark.md`.
-4. Inspect `reports/trackeval_6seq_results.md`.
-5. Inspect `reports/track_reliability_risk.md` and `reports/track_risk_validation.md`.
-6. Inspect `docs/ros2_replay_wrapper.md`.
-7. Watch `media/tracking_latency_demo.mp4`.
+3. Run the tests and artifact checker.
+4. Inspect `reports/cpu_gpu_latency_benchmark.md`.
+5. Inspect `reports/trackeval_6seq_results.md`.
+6. Inspect `reports/track_reliability_risk.md` and `reports/track_risk_validation.md`.
+7. Inspect `docs/ros2_replay_wrapper.md`.
+8. Watch `media/tracking_latency_demo.mp4`.
 
 ## Claim boundaries
 
