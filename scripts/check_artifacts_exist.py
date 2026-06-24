@@ -54,6 +54,14 @@ REQUIRED_FILES = [
     "reports/ros2_end_to_end_topic_smoke_check.md",
     "docs/reviewer_proof_pack.md",
     "docs/release_notes_v1.1.0.md",
+    "scripts/analyze_risk_failure_correlation.py",
+    "reports/risk_failure_correlation.md",
+    "results/tables/m43_risk_vs_id_switches.csv",
+    "results/tables/m43_risk_vs_false_negatives.csv",
+    "results/tables/m43_risk_vs_track_fragmentation.csv",
+    "results/tables/m43_track_failure_diagnostics.csv",
+    "results/tables/m43_frame_failure_diagnostics.csv",
+    "results/plots/m43_risk_vs_failure_rate.png",
 ]
 
 FORBIDDEN_README_PHRASES = [

@@ -69,11 +69,14 @@ Evidence:
 
 The project adds deterministic risk scoring for unstable tracks using low confidence, small boxes, border proximity, motion jumps, and short track duration.
 
+The risk/failure correlation report shows that risk aligns with track fragmentation and frame-level FP/FN burden, while ID switches remain a separate long-track identity-consistency failure mode.
+
 Evidence:
 
 - `scripts/compute_track_risk.py`
 - `reports/track_reliability_risk.md`
 - `reports/track_risk_validation.md`
+- `reports/risk_failure_correlation.md`
 - `results/tables/m33_track_risk_summary.csv`
 - `results/tables/m34_risk_bucket_summary.csv`
 
