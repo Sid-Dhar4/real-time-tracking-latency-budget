@@ -24,6 +24,7 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 - ROS 2 diagnostics latency probe for typed replay topics
 - ROS 2 debug image replay topic for annotated KITTI tracking frames
 - Track reliability risk diagnostics for unstable tracks
+- Risk-score validation showing high/medium risk buckets are shorter-lived and lower-confidence
 
 ## Strongest measured results
 
@@ -35,6 +36,7 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 - ROS 2 diagnostics latency probe: receive p95 `0.608 ms`, internal publish p95 `0.156 ms` at 10 FPS replay
 - ROS 2 debug image topic publishes annotated `sensor_msgs/Image` frames with track boxes and IDs
 - Track reliability risk diagnostics rank unstable tracks using confidence, box size, border proximity, motion jumps, and track length
+- Risk-score validation shows high-risk track lifetime `1.0` frame vs low-risk average `18.9` frames, with lower mean confidence
 
 ## Honest caveats
 

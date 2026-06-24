@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M33 | complete | track reliability risk diagnostics |
+| M34 | complete | track risk validation report |
 
 ## Milestone tracker
 
@@ -319,3 +319,10 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M33B | Add deterministic track risk scoring script | complete |
 | M33C | Add risk tests and report | complete |
 | M33D | Update docs, artifact checks, and commit | complete |
+
+## M34 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M34A | Audit risk-score buckets | complete |
+| M34B | Generate bucket summary, plot, report, and docs | complete |

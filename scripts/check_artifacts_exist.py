@@ -37,6 +37,9 @@ REQUIRED_FILES = [
     "reports/track_reliability_risk.md",
     "results/tables/m33_track_risk_summary.csv",
     "results/tables/m33_top_risky_tracks.csv",
+    "reports/track_risk_validation.md",
+    "results/tables/m34_risk_bucket_summary.csv",
+    "results/plots/m34_risk_bucket_summary.png",
 ]
 
 FORBIDDEN_README_PHRASES = [
