@@ -45,10 +45,12 @@ Core artifacts:
 - `reports/risk_failure_correlation.md`
 - `reports/robot_facing_risk_interface.md`
 - `reports/cpp_tracking_core.md`
+- `reports/online_ros_image_tracking.md`
 - `reports/runtime_environment_audit.md`
 - `reports/cpu_gpu_latency_benchmark.md`
 - `docs/reproduction_matrix.md`
 - `docs/reviewer_proof_pack.md`
+- `docs/release_notes_v1.2.0.md`
 - `docs/release_notes_v1.1.0.md`
 - `results/videos/m11_seq0001_demo_overlay.mp4`
 

@@ -16,8 +16,10 @@ This repository is a reproducible robotics perception benchmark for tracking-by-
 | 4 | `reports/trackeval_6seq_results.md` | multi-sequence tracking metrics |
 | 5 | `reports/trackeval_stress_test.md` | robustness under dropped-frame stress |
 | 6 | `reports/track_reliability_risk.md` and `reports/track_risk_validation.md` | deterministic track-risk diagnostics and validation |
-| 7 | `reports/ros2_end_to_end_topic_smoke_check.md` | ROS 2 nodes actually publish expected topics |
-| 8 | `media/tracking_latency_demo.mp4` | visual tracking demo |
+| 7 | `reports/ros2_end_to_end_topic_smoke_check.md` | ROS 2 replay nodes publish expected topics |
+| 8 | `reports/cpp_tracking_core.md` | C++ association, track lifecycle, risk scoring, tests, and microbenchmark |
+| 9 | `reports/online_ros_image_tracking.md` | online ROS 2 image callback node publishes tracking/risk/safety topics |
+| 10 | `media/tracking_latency_demo.mp4` | visual tracking demo |
 
 ## Strongest evidence
 
@@ -150,11 +152,11 @@ The track risk score is a deterministic diagnostic heuristic, not a learned unce
 
 A concise way to explain the project:
 
-    I built a reproducible robotics perception benchmark around YOLOv8n and ByteTrack on KITTI tracking data. The project evaluates accuracy with TrackEval, latency with CPU/GPU benchmarks, robustness with dropped-frame stress tests, and deployment behavior with a ROS 2 Jazzy replay wrapper. I also added deterministic track-risk diagnostics to identify unstable tracks and validated that higher-risk buckets correspond to shorter-lived and lower-confidence tracks. The repo includes tests, CI, reproduction docs, reports, plots, videos, and ROS 2 smoke checks.
+    I built a reproducible robotics perception benchmark around YOLOv8n and ByteTrack on KITTI tracking data. The project evaluates accuracy with native TrackEval metrics, latency with CPU/GPU benchmarks, robustness with dropped-frame stress tests, and deployment behavior with ROS 2 Jazzy replay and online image-tracking smoke checks. I added deterministic track-risk diagnostics, validated them against fragmentation and frame-level FP/FN burden, exposed robot-facing `/tracking/risk` and `/tracking/safety_status` topics, and implemented a compact C++ tracking core for IoU association, track lifecycle, risk scoring, tests, and microbenchmarking.
 
 ## Resume-level claim
 
-    Built a reproducible robotics perception benchmark for YOLOv8n + ByteTrack on KITTI, combining TrackEval metrics, dropped-frame robustness stress tests, CPU/GPU latency benchmarking, deterministic track-risk diagnostics, and a ROS 2 Jazzy replay wrapper with end-to-end topic smoke checks.
+    Built a reproducible robotics perception benchmark for YOLOv8n + ByteTrack on KITTI, combining TrackEval HOTA/MOTA/IDF1 metrics, dropped-frame robustness tests, CPU/GPU latency benchmarking, deterministic track-risk diagnostics, ROS 2 Jazzy replay and online image-tracking smoke checks, robot-facing risk/safety topics, and a C++ tracking core with tests and microbenchmark.
 
 ## Recommended reviewer command sequence
 
@@ -174,3 +176,8 @@ Run ROS 2 end-to-end topic smoke check, if ROS 2 Jazzy and local KITTI artifacts
 Run CPU/GPU latency benchmark, if CUDA PyTorch is available:
 
     python scripts/benchmark_cpu_gpu_latency.py --config configs/detector/yolov8n.yaml --max-frames 100 --warmup-frames 5 --raw-output results/tables/m36_cpu_gpu_latency_raw.csv --summary-output results/tables/m36_cpu_gpu_latency_summary.csv --plot-output results/plots/m36_cpu_gpu_latency_comparison.png
+
+
+Run online ROS 2 image tracking smoke check, if ROS 2 Jazzy is installed:
+
+    bash scripts/check_ros2_online_image_tracking.sh
