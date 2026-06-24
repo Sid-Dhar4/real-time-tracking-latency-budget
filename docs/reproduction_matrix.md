@@ -17,6 +17,7 @@ The goal is to make the project easy to audit quickly without reading every scri
 | Track reliability risk diagnostics exist | `python scripts/compute_track_risk.py` | risky tracks ranked by confidence, size, border proximity, jumps, and duration | `reports/track_reliability_risk.md` |
 | Risk-score validation exists | inspect risk validation report | high/medium risk buckets are shorter-lived and lower-confidence than low-risk tracks | `reports/track_risk_validation.md` |
 | ROS 2 typed replay wrapper exists | inspect ROS 2 wrapper docs | JSON compatibility topics, typed detections, diagnostics, and debug images documented | `docs/ros2_replay_wrapper.md` |
+| ROS 2 workspace smoke check passes | `bash scripts/check_ros2_workspace.sh` | package builds in a temporary colcon workspace and replay executables are discoverable | `reports/ros2_workspace_smoke_check.md` |
 | ROS 2 diagnostic latency probe exists | inspect latency probe report | diagnostics receive p95 and internal publish p95 reported | `reports/ros2_latency_probe.md` |
 | Demo video exists | inspect visual artifacts | annotated KITTI tracking overlay video and teaser GIF exist | `media/tracking_latency_teaser.gif`, `media/tracking_latency_demo.mp4` |
 
@@ -58,3 +59,7 @@ Run CPU/GPU latency benchmark:
 Run track risk diagnostics:
 
     python scripts/compute_track_risk.py --tracks-csv results/tracks/yolov8n_bytetrack_seq0001_tracks.csv --frame-output results/tables/m33_frame_risk_scores.csv --track-output results/tables/m33_track_risk_summary.csv --top-k-output results/tables/m33_top_risky_tracks.csv --top-k 20
+
+Run ROS 2 workspace smoke check:
+
+    bash scripts/check_ros2_workspace.sh

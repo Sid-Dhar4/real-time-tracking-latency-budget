@@ -48,6 +48,8 @@ REQUIRED_FILES = [
     "results/tables/m36_cpu_gpu_latency_summary.csv",
     "results/plots/m36_cpu_gpu_latency_comparison.png",
     "docs/reproduction_matrix.md",
+    "scripts/check_ros2_workspace.sh",
+    "reports/ros2_workspace_smoke_check.md",
 ]
 
 FORBIDDEN_README_PHRASES = [

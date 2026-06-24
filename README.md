@@ -23,6 +23,7 @@ This repository demonstrates a reproducible robotics perception benchmark for tr
 | Failure analysis | worst-frame examples and ID-switch analysis |
 | ROS 2 diagnostics latency probe | `/tracking/diagnostics` receive p95 `0.608 ms`; internal publish p95 `0.156 ms` at 10 FPS replay |
 | ROS 2 debug image topic | publishes annotated KITTI frames on `/tracking/debug_image` as `sensor_msgs/Image` |
+| ROS 2 workspace smoke check | builds the ROS 2 Jazzy package in a temporary colcon workspace and verifies replay executables |
 | Track reliability risk diagnostics | deterministic risk ranking for low-confidence, short-lived, border-adjacent, or jumpy tracks |
 | Risk-score validation | high/medium risk buckets have shorter lifetimes and lower confidence than low-risk tracks |
 | Runtime environment audit | documents CPU/GPU runtime state and CUDA-enabled PyTorch availability |
@@ -83,6 +84,9 @@ This repository includes local tests and CI checks for schemas, KITTI label sani
 ```bash
 bash scripts/run_tests.sh
 python scripts/check_artifacts_exist.py
+
+# Optional local ROS 2 Jazzy smoke check
+bash scripts/check_ros2_workspace.sh
 ```
 
 GitHub Actions runs these checks on push and pull request via `.github/workflows/tests.yml`.

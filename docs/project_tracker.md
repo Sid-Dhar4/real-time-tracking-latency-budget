@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M37 | complete | reproduction matrix and README audit path |
+| M38 | complete | ROS 2 workspace smoke check |
 
 ## Milestone tracker
 
@@ -349,3 +349,11 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | ----- | ------- | ------ |
 | M37A | Audit README and reproduction docs | complete |
 | M37B | Add reproduction matrix and README link | complete |
+
+## M38 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M38A | Audit ROS 2 workflow hardening path | complete |
+| M38B | Add local ROS 2 workspace smoke-check script | complete |
+| M38C | Add report, reproduction entry, checker, and commit | in progress |
