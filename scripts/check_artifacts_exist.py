@@ -77,6 +77,7 @@ REQUIRED_FILES = [
     "ros2/ros2_tracking_latency/ros2_tracking_latency/image_iou_tracking_node.py",
     "scripts/check_ros2_online_image_tracking.sh",
     "reports/online_ros_image_tracking.md",
+    "docs/release_notes_v1.2.0.md",
 ]
 
 FORBIDDEN_README_PHRASES = [
@@ -86,6 +87,25 @@ FORBIDDEN_README_PHRASES = [
     "Not started yet",
     "GPU benchmark complete",
     "official KITTI leaderboard",
+]
+
+FORBIDDEN_DOC_PHRASES = [
+    "GPU benchmarking was not included",
+    "nvidia-smi is not working",
+    "GPU benchmarking comes later",
+    "not yet an online detector/tracker",
+    "not an online detector/tracker node",
+    "C++ association module",
+    "online ROS 2 detector/tracker node",
+    "The ROS 2 package is currently a replay wrapper over saved tracking outputs",
+]
+
+DOCS_TO_SCAN = [
+    "README.md",
+    "docs/limitations.md",
+    "docs/final_project_summary.md",
+    "docs/project_tracker.md",
+    "docs/reviewer_proof_pack.md",
 ]
 
 def main():
@@ -102,6 +122,19 @@ def main():
         print("Forbidden stale/overclaim README phrases found:")
         for phrase in bad:
             print(f"  - {phrase}")
+        raise SystemExit(1)
+
+    stale_hits = []
+    for doc in DOCS_TO_SCAN:
+        text = Path(doc).read_text(encoding="utf-8")
+        for phrase in FORBIDDEN_DOC_PHRASES:
+            if phrase in text:
+                stale_hits.append((doc, phrase))
+
+    if stale_hits:
+        print("Forbidden stale documentation phrases found:")
+        for doc, phrase in stale_hits:
+            print(f"  - {doc}: {phrase}")
         raise SystemExit(1)
 
     print("Artifact and stale-claim checks passed.")

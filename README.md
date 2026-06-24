@@ -1,7 +1,7 @@
 # Real-Time Object Tracking Under a Robotics Latency Budget
 
 [![tests](https://github.com/Sid-Dhar4/real-time-tracking-latency-budget/actions/workflows/tests.yml/badge.svg)](https://github.com/Sid-Dhar4/real-time-tracking-latency-budget/actions/workflows/tests.yml)
-[![release](https://img.shields.io/badge/release-v1.1.0-blue)](docs/release_notes_v1.1.0.md)
+[![release](https://img.shields.io/badge/release-v1.2.0-blue)](docs/release_notes_v1.2.0.md)
 [![ROS 2](https://img.shields.io/badge/ROS%202-Jazzy-blueviolet)](docs/ros2_replay_wrapper.md)
 
 [![Tracking latency demo](media/tracking_latency_teaser.gif)](media/tracking_latency_demo.mp4)
@@ -43,6 +43,8 @@ Core artifacts:
 - `reports/track_reliability_risk.md`
 - `reports/track_risk_validation.md`
 - `reports/risk_failure_correlation.md`
+- `reports/robot_facing_risk_interface.md`
+- `reports/cpp_tracking_core.md`
 - `reports/runtime_environment_audit.md`
 - `reports/cpu_gpu_latency_benchmark.md`
 - `docs/reproduction_matrix.md`
@@ -83,29 +85,30 @@ The ROS 2 package also includes an online image-tracking node, `image_iou_tracki
 
 ## Release
 
-Current release: `v1.1.0`
+Current release: `v1.2.0`
 
-- Release notes: `docs/release_notes_v1.1.0.md`
-- Tag: `v1.1.0`
-- Scope: v1.0.0 benchmark baseline plus track reliability diagnostics, risk validation, CPU/GPU latency benchmark, CUDA runtime audit, ROS 2 workspace smoke check, ROS 2 end-to-end topic smoke check, reproduction matrix, and reviewer proof pack.
-- Prior baseline: `docs/release_notes_v1.0.0.md`
+- Release notes: `docs/release_notes_v1.2.0.md`
+- Tag: `v1.2.0`
+- Scope: v1.1.0 plus risk-vs-failure correlation, robot-facing risk/safety topics, C++ tracking core, online ROS 2 image tracking node, stale-documentation cleanup, and release packaging.
+- Prior release: `docs/release_notes_v1.1.0.md`
 
 ## Reproducibility checks
 
-This repository includes local tests and CI checks for schemas, KITTI label sanity, IoU tracker behavior, benchmark artifacts, metric regressions, and stale README claims:
+This repository includes local tests and CI checks for schemas, KITTI label sanity, IoU tracker behavior, benchmark artifacts, metric regressions, C++ tracking-core build/tests, and stale documentation claims.
 
-```bash
-bash scripts/run_tests.sh
-python scripts/check_artifacts_exist.py
+Core CI/local checks:
 
-# Optional local ROS 2 Jazzy smoke check
-bash scripts/check_ros2_workspace.sh
+    bash scripts/run_tests.sh
+    bash scripts/check_cpp_tracking_core.sh
+    python scripts/check_artifacts_exist.py
 
-# Optional local ROS 2 end-to-end topic smoke check
-bash scripts/check_ros2_end_to_end_topics.sh
-```
+Optional local ROS 2 Jazzy checks:
 
-GitHub Actions runs these checks on push and pull request via `.github/workflows/tests.yml`.
+    bash scripts/check_ros2_workspace.sh
+    bash scripts/check_ros2_end_to_end_topics.sh
+    bash scripts/check_ros2_online_image_tracking.sh
+
+GitHub Actions runs unit tests, the C++ tracking-core check, and artifact/stale-claim checks. ROS 2 checks are local optional checks for systems with ROS 2 Jazzy installed.
 
 ## Reproduction matrix
 
@@ -142,13 +145,17 @@ Implemented:
 - YOLOv8n detector
 - ByteTrack tracker
 - Simple IoU tracker baseline
-- ROS 2 replay wrapper with JSON compatibility topics, typed `vision_msgs/Detection2DArray` outputs, `diagnostic_msgs/DiagnosticArray` diagnostics, a diagnostics latency probe, and `/tracking/debug_image`
+- C++ tracking core for IoU association, track lifecycle, risk scoring, tests, and microbenchmark
+- ROS 2 replay wrapper with JSON compatibility topics, typed `vision_msgs/Detection2DArray` outputs, `diagnostic_msgs/DiagnosticArray` diagnostics, a diagnostics latency probe, `/tracking/debug_image`, `/tracking/risk`, and `/tracking/safety_status`
+- Online ROS 2 image tracking node, `image_iou_tracking`, that subscribes to `/camera/image_raw` and publishes tracking, detection, diagnostics, risk, and safety-status topics
 
 Future optional extensions:
 
-- OC-SORT or second detector comparison
-- ONNX/TensorRT export or an online ROS 2 detector node
-- C++ association module
+- OC-SORT, BoT-SORT, or second detector comparison
+- ONNX/TensorRT export
+- nuScenes-mini or another dataset
+- Real camera video integration
+- Public benchmark submission
 
 ## Pipeline
 
@@ -323,10 +330,9 @@ The first 5 frames are excluded as warmup. Detector-only CPU/GPU latency is repo
 
 ## Limitations
 
-The detector uses pretrained YOLOv8n weights, not KITTI-specific training. Results are local reproducible evaluations on KITTI training sequences, not a public KITTI leaderboard submission. The ROS 2 package is currently a replay wrapper over saved tracking outputs, not an online detector/tracker node.
+The detector uses pretrained YOLOv8n weights, not KITTI-specific training. Results are local reproducible evaluations on KITTI training sequences, not a public KITTI leaderboard submission. The online ROS 2 node uses a deterministic bright-region detector for smoke testing; the measured benchmark results still come from the KITTI-style YOLOv8n + ByteTrack pipeline. The CPU/GPU benchmark measures detector inference on preloaded KITTI frames and does not include camera transport, planner latency, or actuation. The track-risk score is a deterministic diagnostic heuristic, not a learned uncertainty model or safety certification metric.
 
 ## Future work
 
-OC-SORT or BoT-SORT comparison, ONNX/TensorRT export, C++ association/risk core, online ROS 2 detector/tracker node, nuScenes-mini, and real camera video.
+Useful future extensions would be OC-SORT or BoT-SORT comparison, ONNX/TensorRT export, nuScenes-mini or another dataset, real camera video integration, and public benchmark submission. The current repository already includes the C++ tracking core and online ROS 2 image tracking smoke-test node.
 
-- `reports/online_ros_image_tracking.md`

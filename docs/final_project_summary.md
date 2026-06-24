@@ -6,7 +6,7 @@ Real-Time Object Tracking Under a Robotics Latency Budget
 
 ## One-line description
 
-A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack object tracking on KITTI sequences with latency profiling, TrackEval metrics, failure analysis, robustness stress tests, and a simple IoU tracker baseline.
+A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack object tracking on KITTI sequences with latency profiling, TrackEval metrics, failure analysis, robustness stress tests, ROS 2 replay/online smoke checks, risk diagnostics, and a C++ tracking core.
 
 ## What was built
 
@@ -52,10 +52,13 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 ## Honest caveats
 
 - This is not a public KITTI leaderboard submission.
-- The detector is pretrained YOLOv8n, not trained from scratch.
-- GPU benchmarking was not included because NVIDIA driver support was not working through `nvidia-smi`.
-- The project focuses on tracking-by-detection benchmarking, not full autonomous driving.
+- The detector is pretrained YOLOv8n, not trained from scratch or fine-tuned on KITTI.
+- The online ROS 2 image node uses a deterministic bright-region detector for smoke-testable architecture validation; the measured benchmark results still come from YOLOv8n + ByteTrack outputs.
+- The CPU/GPU latency benchmark measures detector inference on preloaded frames, not full robot latency including camera transport, planning, or actuation.
+- The track-risk score is a deterministic diagnostic heuristic, not a learned uncertainty model or certified safety metric.
+- The project focuses on tracking-by-detection benchmarking and robotics perception infrastructure, not full autonomous driving.
 
 ## Interview explanation
 
-I built this project to study robotics perception reliability under detection, association, latency, and dropped-frame constraints. The system runs YOLOv8n detections on KITTI tracking sequences `0000`–`0005`, tracks objects with ByteTrack, evaluates with native TrackEval KITTI HOTA/MOTA/IDF1, and adds local diagnostics for threshold sweeps and failure analysis. I also compare ByteTrack against a simple IoU tracker, stress-test dropped-frame failures, profile CPU latency, and expose saved tracking outputs through ROS 2 topics including `/tracking/objects`, `/tracking/status`, `/tracking/detections_2d`, `/tracking/diagnostics`, and `/tracking/debug_image`.
+I built this project to study robotics perception reliability under detection, association, latency, and dropped-frame constraints. The system runs YOLOv8n detections on KITTI tracking sequences `0000`–`0005`, tracks objects with ByteTrack, evaluates with native TrackEval KITTI HOTA/MOTA/IDF1, compares against a simple IoU tracker, stress-tests dropped-frame failures, profiles CPU/GPU detector latency, and adds deterministic risk diagnostics for unstable tracks. I also expose saved tracking outputs through ROS 2 Jazzy topics, publish robot-facing risk/safety status, added a compact C++ tracking core for latency-critical primitives, and built an online ROS 2 image-tracking smoke-test node that subscribes to `/camera/image_raw`.
+
