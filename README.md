@@ -41,6 +41,7 @@ Core artifacts:
 - `reports/runtime_environment_audit.md`
 - `reports/cpu_gpu_latency_benchmark.md`
 - `docs/reproduction_matrix.md`
+- `docs/reviewer_proof_pack.md`
 - `results/videos/m11_seq0001_demo_overlay.mp4`
 
 ## Visual artifacts
@@ -98,6 +99,10 @@ GitHub Actions runs these checks on push and pull request via `.github/workflows
 ## Reproduction matrix
 
 For fast auditing, see `docs/reproduction_matrix.md`. It maps each headline claim to the command, expected result, and checked-in evidence.
+
+## Reviewer proof pack
+
+For the fastest audit path, see `docs/reviewer_proof_pack.md`. It summarizes the strongest evidence, claim boundaries, and recommended inspection order.
 
 ## Environment setup
 

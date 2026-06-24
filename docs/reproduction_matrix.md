@@ -24,7 +24,8 @@ The goal is to make the project easy to audit quickly without reading every scri
 
 ## Recommended audit order
 
-1. Read the README key-results table.
+1. Read `docs/reviewer_proof_pack.md`.
+2. Read the README key-results table.
 2. Run the tests and artifact checker.
 3. Inspect `reports/cpu_gpu_latency_benchmark.md`.
 4. Inspect `reports/trackeval_6seq_results.md`.
