@@ -50,6 +50,8 @@ REQUIRED_FILES = [
     "docs/reproduction_matrix.md",
     "scripts/check_ros2_workspace.sh",
     "reports/ros2_workspace_smoke_check.md",
+    "scripts/check_ros2_end_to_end_topics.sh",
+    "reports/ros2_end_to_end_topic_smoke_check.md",
 ]
 
 FORBIDDEN_README_PHRASES = [

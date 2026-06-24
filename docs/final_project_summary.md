@@ -29,6 +29,7 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 - CPU/GPU latency benchmark measuring YOLOv8n inference on RTX 5060 Laptop GPU
 - Reproduction matrix mapping headline claims to commands, expected outputs, and artifacts
 - ROS 2 workspace smoke check builds the package in a temporary colcon workspace and verifies replay executables
+- ROS 2 end-to-end topic smoke check verifies replay nodes publish status, objects, typed detections, diagnostics, and debug images
 
 ## Strongest measured results
 
