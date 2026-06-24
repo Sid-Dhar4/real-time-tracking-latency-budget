@@ -27,6 +27,7 @@ A reproducible robotics perception benchmark that evaluates YOLOv8n + ByteTrack 
 - Risk-score validation showing high/medium risk buckets are shorter-lived and lower-confidence
 - Runtime environment audit documenting CPU benchmark support and CUDA-enabled PyTorch availability
 - CPU/GPU latency benchmark measuring YOLOv8n inference on RTX 5060 Laptop GPU
+- Reproduction matrix mapping headline claims to commands, expected outputs, and artifacts
 
 ## Strongest measured results
 

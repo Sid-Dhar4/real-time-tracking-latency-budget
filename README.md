@@ -38,6 +38,7 @@ Core artifacts:
 - `reports/track_risk_validation.md`
 - `reports/runtime_environment_audit.md`
 - `reports/cpu_gpu_latency_benchmark.md`
+- `docs/reproduction_matrix.md`
 - `results/videos/m11_seq0001_demo_overlay.mp4`
 
 ## Visual artifacts
@@ -85,6 +86,10 @@ python scripts/check_artifacts_exist.py
 ```
 
 GitHub Actions runs these checks on push and pull request via `.github/workflows/tests.yml`.
+
+## Reproduction matrix
+
+For fast auditing, see `docs/reproduction_matrix.md`. It maps each headline claim to the command, expected result, and checked-in evidence.
 
 ## Environment setup
 

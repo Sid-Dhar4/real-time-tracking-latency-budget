@@ -47,6 +47,7 @@ REQUIRED_FILES = [
     "results/tables/m36_cpu_gpu_latency_raw.csv",
     "results/tables/m36_cpu_gpu_latency_summary.csv",
     "results/plots/m36_cpu_gpu_latency_comparison.png",
+    "docs/reproduction_matrix.md",
 ]
 
 FORBIDDEN_README_PHRASES = [

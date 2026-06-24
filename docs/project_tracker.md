@@ -4,7 +4,7 @@
 
 | Active Milestone | Status | Next action |
 | ---------------- | ------ | ----------- |
-| M36 | complete | measured CPU/GPU detector latency benchmark |
+| M37 | complete | reproduction matrix and README audit path |
 
 ## Milestone tracker
 
@@ -342,3 +342,10 @@ NVIDIA GPU is visible on PCI but nvidia-smi is not working. Current detector/tra
 | M36A | Inspect existing benchmark path and CUDA state | complete |
 | M36B | Add and run measured CPU/GPU latency benchmark | complete |
 | M36C | Add report, docs, artifact checks, and commit | in progress |
+
+## M37 blocks
+
+| Block | Purpose | Status |
+| ----- | ------- | ------ |
+| M37A | Audit README and reproduction docs | complete |
+| M37B | Add reproduction matrix and README link | complete |
